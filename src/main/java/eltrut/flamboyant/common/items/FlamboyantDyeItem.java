@@ -9,7 +9,6 @@ import net.minecraft.item.Items;
 import net.minecraft.util.NonNullList;
 
 public class FlamboyantDyeItem extends Item {
-	
 	private static final TargetedItemGroupFiller FILLER = new TargetedItemGroupFiller(() -> Items.BLACK_DYE);
 
 	public FlamboyantDyeItem(Properties properties) {
@@ -18,7 +17,7 @@ public class FlamboyantDyeItem extends Item {
 	
 	@Override
 	public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
-		FILLER.fillItem(this.asItem(), group, items);
+		FILLER.fillItem(this, group, items);
 	}
 
 }
