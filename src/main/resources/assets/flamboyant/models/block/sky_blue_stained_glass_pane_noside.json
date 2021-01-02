@@ -1,0 +1,6 @@
+{
+    "parent": "block/template_glass_pane_noside",
+    "textures": {
+        "pane": "flamboyant:block/sky_blue_stained_glass"
+    }
+}

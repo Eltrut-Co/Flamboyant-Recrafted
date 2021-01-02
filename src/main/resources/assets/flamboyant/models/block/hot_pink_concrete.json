@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "flamboyant:block/hot_pink_concrete"
+    }
+}

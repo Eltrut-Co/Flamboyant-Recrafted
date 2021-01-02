@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stained_terracotta",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:terracotta"
+    },
+    "X": {
+      "item": "flamboyant:hot_pink_dye"
+    }
+  },
+  "result": {
+    "item": "flamboyant:hot_pink_terracotta",
+    "count": 8
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "carpet",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "flamboyant:olive_wool"
+    }
+  },
+  "result": {
+    "item": "flamboyant:olive_carpet",
+    "count": 3
+  }
+}

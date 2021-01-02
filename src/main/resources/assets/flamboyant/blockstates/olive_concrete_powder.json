@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "flamboyant:block/olive_concrete_powder"},
+            { "model": "flamboyant:block/olive_concrete_powder", "y": 90 },
+            { "model": "flamboyant:block/olive_concrete_powder", "y": 180 },
+            { "model": "flamboyant:block/olive_concrete_powder", "y": 270 }
+        ]
+    }
+}
