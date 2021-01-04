@@ -4,6 +4,7 @@ import com.minecraftabnormals.abnormals_core.common.blocks.InjectedBlock;
 import com.minecraftabnormals.abnormals_core.core.util.registry.BlockSubRegistryHelper;
 
 import eltrut.flamboyant.common.blocks.FCarpetBlock;
+import eltrut.flamboyant.common.blocks.FConcretePowderBlock;
 import eltrut.flamboyant.common.blocks.FGlazedTerracottaBlock;
 import eltrut.flamboyant.core.Flamboyant;
 import net.minecraft.block.AbstractBlock;
@@ -89,8 +90,40 @@ public class FlamboyantBlocks {
 	public static final RegistryObject<Block> SLATE_GRAY_GLAZED_TERRACOTTA = HELPER.createBlock("slate_gray_glazed_terracotta", () -> new FGlazedTerracottaBlock(Properties.GLAZED_TERRACOTTA), ItemGroup.DECORATIONS);
 	public static final RegistryObject<Block> VIOLET_GLAZED_TERRACOTTA = HELPER.createBlock("violet_glazed_terracotta", () -> new FGlazedTerracottaBlock(Properties.GLAZED_TERRACOTTA), ItemGroup.DECORATIONS);
 
-	// Concrete is a building block
-	// Concrete powder is building block
+	public static final RegistryObject<Block> AMBER_CONCRETE = HELPER.createBlock("amber_concrete", () -> new InjectedBlock(Items.BLACK_CONCRETE, Properties.CONCRETE), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> BEIGE_CONCRETE = HELPER.createBlock("beige_concrete", () -> new InjectedBlock(Items.BLACK_CONCRETE, Properties.CONCRETE), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> CREAM_CONCRETE = HELPER.createBlock("cream_concrete", () -> new InjectedBlock(Items.BLACK_CONCRETE, Properties.CONCRETE), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> DARK_GREEN_CONCRETE = HELPER.createBlock("dark_green_concrete", () -> new InjectedBlock(Items.BLACK_CONCRETE, Properties.CONCRETE), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> FOREST_GREEN_CONCRETE = HELPER.createBlock("forest_green_concrete", () -> new InjectedBlock(Items.BLACK_CONCRETE, Properties.CONCRETE), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> HOT_PINK_CONCRETE = HELPER.createBlock("hot_pink_concrete", () -> new InjectedBlock(Items.BLACK_CONCRETE, Properties.CONCRETE), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> INDIGO_CONCRETE = HELPER.createBlock("indigo_concrete", () -> new InjectedBlock(Items.BLACK_CONCRETE, Properties.CONCRETE), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> MAROON_CONCRETE = HELPER.createBlock("maroon_concrete", () -> new InjectedBlock(Items.BLACK_CONCRETE, Properties.CONCRETE), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> NAVY_CONCRETE = HELPER.createBlock("navy_concrete", () -> new InjectedBlock(Items.BLACK_CONCRETE, Properties.CONCRETE), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> OLIVE_CONCRETE = HELPER.createBlock("olive_concrete", () -> new InjectedBlock(Items.BLACK_CONCRETE, Properties.CONCRETE), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> PALE_GREEN_CONCRETE = HELPER.createBlock("pale_green_concrete", () -> new InjectedBlock(Items.BLACK_CONCRETE, Properties.CONCRETE), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> PALE_PINK_CONCRETE = HELPER.createBlock("pale_pink_concrete", () -> new InjectedBlock(Items.BLACK_CONCRETE, Properties.CONCRETE), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> PALE_YELLOW_CONCRETE = HELPER.createBlock("pale_yellow_concrete", () -> new InjectedBlock(Items.BLACK_CONCRETE, Properties.CONCRETE), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> SKY_BLUE_CONCRETE = HELPER.createBlock("sky_blue_concrete", () -> new InjectedBlock(Items.BLACK_CONCRETE, Properties.CONCRETE), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> SLATE_GRAY_CONCRETE = HELPER.createBlock("slate_gray_concrete", () -> new InjectedBlock(Items.BLACK_CONCRETE, Properties.CONCRETE), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> VIOLET_CONCRETE = HELPER.createBlock("violet_concrete", () -> new InjectedBlock(Items.BLACK_CONCRETE, Properties.CONCRETE), ItemGroup.BUILDING_BLOCKS);
+	
+	public static final RegistryObject<Block> AMBER_CONCRETE_POWDER = HELPER.createBlock("amber_concrete_powder", () -> new FConcretePowderBlock(AMBER_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> BEIGE_CONCRETE_POWDER = HELPER.createBlock("beige_concrete_powder", () -> new FConcretePowderBlock(BEIGE_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> CREAM_CONCRETE_POWDER = HELPER.createBlock("cream_concrete_powder", () -> new FConcretePowderBlock(CREAM_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> DARK_GREEN_CONCRETE_POWDER = HELPER.createBlock("dark_green_concrete_powder", () -> new FConcretePowderBlock(DARK_GREEN_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> FOREST_GREEN_CONCRETE_POWDER = HELPER.createBlock("forest_green_concrete_powder", () -> new FConcretePowderBlock(FOREST_GREEN_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> HOT_PINK_CONCRETE_POWDER = HELPER.createBlock("hot_pink_concrete_powder", () -> new FConcretePowderBlock(HOT_PINK_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> INDIGO_CONCRETE_POWDER = HELPER.createBlock("indigo_concrete_powder", () -> new FConcretePowderBlock(INDIGO_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> MAROON_CONCRETE_POWDER = HELPER.createBlock("maroon_concrete_powder", () -> new FConcretePowderBlock(MAROON_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> NAVY_CONCRETE_POWDER = HELPER.createBlock("navy_concrete_powder", () -> new FConcretePowderBlock(NAVY_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> OLIVE_CONCRETE_POWDER = HELPER.createBlock("olive_concrete_powder", () -> new FConcretePowderBlock(OLIVE_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> PALE_GREEN_CONCRETE_POWDER = HELPER.createBlock("pale_green_concrete_powder", () -> new FConcretePowderBlock(PALE_GREEN_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> PALE_PINK_CONCRETE_POWDER = HELPER.createBlock("pale_pink_concrete_powder", () -> new FConcretePowderBlock(PALE_PINK_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> PALE_YELLOW_CONCRETE_POWDER = HELPER.createBlock("pale_yellow_concrete_powder", () -> new FConcretePowderBlock(PALE_YELLOW_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> SKY_BLUE_CONCRETE_POWDER = HELPER.createBlock("sky_blue_concrete_powder", () -> new FConcretePowderBlock(SKY_BLUE_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> SLATE_GRAY_CONCRETE_POWDER = HELPER.createBlock("slate_gray_concrete_powder", () -> new FConcretePowderBlock(SLATE_GRAY_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> VIOLET_CONCRETE_POWDER = HELPER.createBlock("violet_concrete_powder", () -> new FConcretePowderBlock(VIOLET_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
+	
 	// Glass is building block
 	// Pane is decoration
 	
