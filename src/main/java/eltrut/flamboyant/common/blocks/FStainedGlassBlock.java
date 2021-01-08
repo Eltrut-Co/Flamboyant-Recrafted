@@ -13,7 +13,7 @@ import net.minecraft.util.NonNullList;
 public class FStainedGlassBlock extends AbstractGlassBlock implements IBeaconBeamColorProvider {
 	private static final TargetedItemGroupFiller FILLER = new TargetedItemGroupFiller(() -> Items.BLACK_STAINED_GLASS);
 
-	protected FStainedGlassBlock(Properties properties) {
+	public FStainedGlassBlock(Properties properties) {
 		super(properties);
 	}
 

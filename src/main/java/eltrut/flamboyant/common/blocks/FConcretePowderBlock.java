@@ -10,7 +10,7 @@ import net.minecraft.item.Items;
 import net.minecraft.util.NonNullList;
 
 public class FConcretePowderBlock extends ConcretePowderBlock {
-	private static final TargetedItemGroupFiller FILLER = new TargetedItemGroupFiller(() -> Items.BLACK_CONCRETE);
+	private static final TargetedItemGroupFiller FILLER = new TargetedItemGroupFiller(() -> Items.BLACK_CONCRETE_POWDER);
 
 	public FConcretePowderBlock(Block solidified, Properties properties) {
 		super(solidified, properties);

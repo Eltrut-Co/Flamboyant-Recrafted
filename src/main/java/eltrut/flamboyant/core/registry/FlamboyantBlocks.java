@@ -6,6 +6,8 @@ import com.minecraftabnormals.abnormals_core.core.util.registry.BlockSubRegistry
 import eltrut.flamboyant.common.blocks.FCarpetBlock;
 import eltrut.flamboyant.common.blocks.FConcretePowderBlock;
 import eltrut.flamboyant.common.blocks.FGlazedTerracottaBlock;
+import eltrut.flamboyant.common.blocks.FStainedGlassBlock;
+import eltrut.flamboyant.common.blocks.FStainedGlassPaneBlock;
 import eltrut.flamboyant.core.Flamboyant;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -124,8 +126,39 @@ public class FlamboyantBlocks {
 	public static final RegistryObject<Block> SLATE_GRAY_CONCRETE_POWDER = HELPER.createBlock("slate_gray_concrete_powder", () -> new FConcretePowderBlock(SLATE_GRAY_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> VIOLET_CONCRETE_POWDER = HELPER.createBlock("violet_concrete_powder", () -> new FConcretePowderBlock(VIOLET_CONCRETE.get(), Properties.CONCRETE_POWDER), ItemGroup.BUILDING_BLOCKS);
 	
-	// Glass is building block
-	// Pane is decoration
+	public static final RegistryObject<Block> AMBER_STAINED_GLASS = HELPER.createBlock("amber_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> BEIGE_STAINED_GLASS = HELPER.createBlock("beige_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> CREAM_STAINED_GLASS = HELPER.createBlock("cream_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> DARK_GREEN_STAINED_GLASS = HELPER.createBlock("dark_green_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> FOREST_GREEN_STAINED_GLASS = HELPER.createBlock("forest_green_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> HOT_PINK_STAINED_GLASS = HELPER.createBlock("hot_pink_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> INDIGO_STAINED_GLASS = HELPER.createBlock("indigo_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> MAROON_STAINED_GLASS = HELPER.createBlock("maroon_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> NAVY_STAINED_GLASS = HELPER.createBlock("navy_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> OLIVE_STAINED_GLASS = HELPER.createBlock("olive_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> PALE_GREEN_STAINED_GLASS = HELPER.createBlock("pale_green_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> PALE_PINK_STAINED_GLASS = HELPER.createBlock("pale_pink_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> PALE_YELLOW_STAINED_GLASS = HELPER.createBlock("pale_yellow_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> SKY_BLUE_STAINED_GLASS = HELPER.createBlock("sky_blue_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> SLATE_GRAY_STAINED_GLASS = HELPER.createBlock("slate_gray_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> VIOLET_STAINED_GLASS = HELPER.createBlock("violet_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.BUILDING_BLOCKS);
+	
+	public static final RegistryObject<Block> AMBER_STAINED_GLASS_PANE = HELPER.createBlock("amber_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> BEIGE_STAINED_GLASS_PANE = HELPER.createBlock("beige_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> CREAM_STAINED_GLASS_PANE = HELPER.createBlock("cream_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> DARK_GREEN_STAINED_GLASS_PANE = HELPER.createBlock("dark_green_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> FOREST_GREEN_STAINED_GLASS_PANE = HELPER.createBlock("forest_green_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> HOT_PINK_STAINED_GLASS_PANE = HELPER.createBlock("hot_pink_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> INDIGO_STAINED_GLASS_PANE = HELPER.createBlock("indigo_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> MAROON_STAINED_GLASS_PANE = HELPER.createBlock("maroon_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> NAVY_STAINED_GLASS_PANE = HELPER.createBlock("navy_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> OLIVE_STAINED_GLASS_PANE = HELPER.createBlock("olive_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> PALE_GREEN_STAINED_GLASS_PANE = HELPER.createBlock("pale_green_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> PALE_PINK_STAINED_GLASS_PANE = HELPER.createBlock("pale_pink_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> PALE_YELLOW_STAINED_GLASS_PANE = HELPER.createBlock("pale_yellow_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> SKY_BLUE_STAINED_GLASS_PANE = HELPER.createBlock("sky_blue_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> SLATE_GRAY_STAINED_GLASS_PANE = HELPER.createBlock("slate_gray_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> VIOLET_STAINED_GLASS_PANE = HELPER.createBlock("violet_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
 	
 	public static class Properties {
 		

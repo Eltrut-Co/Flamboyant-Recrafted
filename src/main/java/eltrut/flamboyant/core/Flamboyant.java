@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.minecraftabnormals.abnormals_core.core.util.registry.RegistryHelper;
 
+import eltrut.flamboyant.core.other.FlamboyantCompat;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -40,5 +41,8 @@ public class Flamboyant
     }
     
     private void doClientStuff(final FMLClientSetupEvent event) {
+    	event.enqueueWork(() -> {
+    		FlamboyantCompat.registerBlockRenderers();
+    	});
     }
 }
