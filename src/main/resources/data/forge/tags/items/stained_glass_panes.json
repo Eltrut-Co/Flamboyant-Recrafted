@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "flamboyant:amber_stained_glass_pane",
+    "flamboyant:beige_stained_glass_pane",
+    "flamboyant:cream_stained_glass_pane",
+    "flamboyant:dark_green_stained_glass_pane",
+    "flamboyant:forest_green_stained_glass_pane",
+    "flamboyant:hot_pink_stained_glass_pane",
+    "flamboyant:indigo_stained_glass_pane",
+    "flamboyant:maroon_stained_glass_pane",
+    "flamboyant:navy_stained_glass_pane",
+    "flamboyant:olive_stained_glass_pane",
+    "flamboyant:pale_green_stained_glass_pane",
+    "flamboyant:pale_pink_stained_glass_pane",
+    "flamboyant:pale_yellow_stained_glass_pane",
+    "flamboyant:sky_blue_stained_glass_pane",
+    "flamboyant:slate_gray_stained_glass_pane",
+    "flamboyant:violet_stained_glass_pane"
+  ]
+}

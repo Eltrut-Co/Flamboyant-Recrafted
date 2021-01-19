@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "flamboyant:amber_dye",
+    "flamboyant:beige_dye",
+    "flamboyant:cream_dye",
+    "flamboyant:dark_green_dye",
+    "flamboyant:forest_green_dye",
+    "flamboyant:hot_pink_dye",
+    "flamboyant:indigo_dye",
+    "flamboyant:maroon_dye",
+    "flamboyant:navy_dye",
+    "flamboyant:olive_dye",
+    "flamboyant:pale_green_dye",
+    "flamboyant:pale_pink_dye",
+    "flamboyant:pale_yellow_dye",
+    "flamboyant:sky_blue_dye",
+    "flamboyant:slate_gray_dye",
+    "flamboyant:violet_dye"
+  ]
+}
