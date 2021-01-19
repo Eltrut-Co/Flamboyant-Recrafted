@@ -8,10 +8,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.NonNullList;
 
-public class FlamboyantDyeItem extends Item {
+public class FDyeItem extends Item {
 	private static final TargetedItemGroupFiller FILLER = new TargetedItemGroupFiller(() -> Items.BLACK_DYE);
 
-	public FlamboyantDyeItem(Properties properties) {
+	public FDyeItem(Properties properties) {
 		super(properties);
 	}
 	
