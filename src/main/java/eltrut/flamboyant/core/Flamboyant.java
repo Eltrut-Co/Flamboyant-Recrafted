@@ -15,7 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod("flamboyant")
-@Mod.EventBusSubscriber(modid = "addendum", bus = Bus.MOD)
+@Mod.EventBusSubscriber(modid = "flamboyant", bus = Bus.MOD)
 public class Flamboyant
 {
     private static final Logger LOGGER = LogManager.getLogger();
