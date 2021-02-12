@@ -4,7 +4,6 @@ import com.minecraftabnormals.abnormals_core.core.util.registry.ItemSubRegistryH
 
 import eltrut.flamboyant.common.items.FDyeItem;
 import eltrut.flamboyant.core.Flamboyant;
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.fml.RegistryObject;
