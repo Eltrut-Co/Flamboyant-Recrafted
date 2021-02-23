@@ -1,8 +1,11 @@
 package eltrut.flamboyant.core.other;
 
+import eltrut.flamboyant.client.renderer.FBedTileEntityRenderer;
 import eltrut.flamboyant.core.registry.FlamboyantBlocks;
+import eltrut.flamboyant.core.registry.FlamboyantTileEntities;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 
 public class FlamboyantCompat {
 	
@@ -40,6 +43,10 @@ public class FlamboyantCompat {
 		RenderTypeLookup.setRenderLayer(FlamboyantBlocks.SKY_BLUE_STAINED_GLASS_PANE.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(FlamboyantBlocks.SLATE_GRAY_STAINED_GLASS_PANE.get(), RenderType.getTranslucent());
 		RenderTypeLookup.setRenderLayer(FlamboyantBlocks.VIOLET_STAINED_GLASS_PANE.get(), RenderType.getTranslucent());
+	}
+	
+	public static void registerEntityRenderers() {
+		ClientRegistry.bindTileEntityRenderer(FlamboyantTileEntities.BED.get(), FBedTileEntityRenderer::new);
 	}
 	
 }

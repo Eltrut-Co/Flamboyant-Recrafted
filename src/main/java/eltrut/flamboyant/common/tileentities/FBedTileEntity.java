@@ -19,6 +19,7 @@ public class FBedTileEntity extends TileEntity {
 		this.setColor(colorIn);
 	}
 
+	@Override
 	public SUpdateTileEntityPacket getUpdatePacket() {
 		return new SUpdateTileEntityPacket(this.pos, 11, this.getUpdateTag());
 	}

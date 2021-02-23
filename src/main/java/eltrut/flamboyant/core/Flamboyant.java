@@ -43,6 +43,7 @@ public class Flamboyant
     private void doClientStuff(final FMLClientSetupEvent event) {
     	event.enqueueWork(() -> {
     		FlamboyantCompat.registerBlockRenderers();
+    		FlamboyantCompat.registerEntityRenderers();
     	});
     }
 }

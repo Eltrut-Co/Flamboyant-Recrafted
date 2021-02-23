@@ -165,22 +165,22 @@ public class FlamboyantBlocks {
 	public static final RegistryObject<Block> SLATE_GRAY_STAINED_GLASS_PANE = HELPER.createBlock("slate_gray_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
 	public static final RegistryObject<Block> VIOLET_STAINED_GLASS_PANE = HELPER.createBlock("violet_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
 	
-	public static final RegistryObject<Block> AMBER_BED = HELPER.createBlock("amber_bed", () -> createBedFromColor(FDyeColors.AMBER), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> BEIGE_BED = HELPER.createBlock("beige_bed", () -> createBedFromColor(FDyeColors.BEIGE), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> CREAM_BED = HELPER.createBlock("cream_bed", () -> createBedFromColor(FDyeColors.CREAM), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> DARK_GREEN_BED = HELPER.createBlock("dark_green_bed", () -> createBedFromColor(FDyeColors.DARK_GREEN), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> FOREST_GREEN_BED = HELPER.createBlock("forest_green_bed", () -> createBedFromColor(FDyeColors.FOREST_GREEN), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> HOT_PINK_BED = HELPER.createBlock("hot_pink_bed", () -> createBedFromColor(FDyeColors.HOT_PINK), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> INDIGO_BED = HELPER.createBlock("indigo_bed", () -> createBedFromColor(FDyeColors.INDIGO), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> MAROON_BED = HELPER.createBlock("maroon_bed", () -> createBedFromColor(FDyeColors.MAROON), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> NAVY_BED = HELPER.createBlock("navy_bed", () -> createBedFromColor(FDyeColors.NAVY), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> OLIVE_BED = HELPER.createBlock("olive_bed", () -> createBedFromColor(FDyeColors.OLIVE), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> PALE_GREEN_BED = HELPER.createBlock("pale_green_bed", () -> createBedFromColor(FDyeColors.PALE_GREEN), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> PALE_PINK_BED = HELPER.createBlock("pale_pink_bed", () -> createBedFromColor(FDyeColors.PALE_PINK), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> PALE_YELLOW_BED = HELPER.createBlock("pale_yellow_bed", () -> createBedFromColor(FDyeColors.PALE_YELLOW), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> SKY_BLUE_BED = HELPER.createBlock("sky_blue_bed", () -> createBedFromColor(FDyeColors.SKY_BLUE), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> SLATE_GRAY_BED = HELPER.createBlock("slate_gray_bed", () -> createBedFromColor(FDyeColors.SLATE_GRAY), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> VIOLET_BED = HELPER.createBlock("violet_bed", () -> createBedFromColor(FDyeColors.VIOLET), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> AMBER_BED = HELPER.createBlockNoItem("amber_bed", () -> createBedFromColor(FDyeColors.AMBER));
+	public static final RegistryObject<Block> BEIGE_BED = HELPER.createBlockNoItem("beige_bed", () -> createBedFromColor(FDyeColors.BEIGE));
+	public static final RegistryObject<Block> CREAM_BED = HELPER.createBlockNoItem("cream_bed", () -> createBedFromColor(FDyeColors.CREAM));
+	public static final RegistryObject<Block> DARK_GREEN_BED = HELPER.createBlockNoItem("dark_green_bed", () -> createBedFromColor(FDyeColors.DARK_GREEN));
+	public static final RegistryObject<Block> FOREST_GREEN_BED = HELPER.createBlockNoItem("forest_green_bed", () -> createBedFromColor(FDyeColors.FOREST_GREEN));
+	public static final RegistryObject<Block> HOT_PINK_BED = HELPER.createBlockNoItem("hot_pink_bed", () -> createBedFromColor(FDyeColors.HOT_PINK));
+	public static final RegistryObject<Block> INDIGO_BED = HELPER.createBlockNoItem("indigo_bed", () -> createBedFromColor(FDyeColors.INDIGO));
+	public static final RegistryObject<Block> MAROON_BED = HELPER.createBlockNoItem("maroon_bed", () -> createBedFromColor(FDyeColors.MAROON));
+	public static final RegistryObject<Block> NAVY_BED = HELPER.createBlockNoItem("navy_bed", () -> createBedFromColor(FDyeColors.NAVY));
+	public static final RegistryObject<Block> OLIVE_BED = HELPER.createBlockNoItem("olive_bed", () -> createBedFromColor(FDyeColors.OLIVE));
+	public static final RegistryObject<Block> PALE_GREEN_BED = HELPER.createBlockNoItem("pale_green_bed", () -> createBedFromColor(FDyeColors.PALE_GREEN));
+	public static final RegistryObject<Block> PALE_PINK_BED = HELPER.createBlockNoItem("pale_pink_bed", () -> createBedFromColor(FDyeColors.PALE_PINK));
+	public static final RegistryObject<Block> PALE_YELLOW_BED = HELPER.createBlockNoItem("pale_yellow_bed", () -> createBedFromColor(FDyeColors.PALE_YELLOW));
+	public static final RegistryObject<Block> SKY_BLUE_BED = HELPER.createBlockNoItem("sky_blue_bed", () -> createBedFromColor(FDyeColors.SKY_BLUE));
+	public static final RegistryObject<Block> SLATE_GRAY_BED = HELPER.createBlockNoItem("slate_gray_bed", () -> createBedFromColor(FDyeColors.SLATE_GRAY));
+	public static final RegistryObject<Block> VIOLET_BED = HELPER.createBlockNoItem("violet_bed", () -> createBedFromColor(FDyeColors.VIOLET));
 	
 	private static FBedBlock createBedFromColor(FDyeColor color) {
 		return new FBedBlock(color, AbstractBlock.Properties.create(Material.WOOL, (state) -> {
