@@ -4,7 +4,7 @@ import com.minecraftabnormals.abnormals_core.core.util.registry.TileEntitySubReg
 
 import eltrut.flamboyant.common.tileentities.FBedTileEntity;
 import eltrut.flamboyant.core.Flamboyant;
-import net.minecraft.block.Block;
+import eltrut.flamboyant.core.registry.FlamboyantBlocks.ColoredBlocks;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
@@ -15,6 +15,6 @@ public class FlamboyantTileEntities {
 	
 	public static final TileEntitySubRegistryHelper HELPER = Flamboyant.REGISTRY_HELPER.getTileEntitySubHelper();
 	
-	public static final RegistryObject<TileEntityType<FBedTileEntity>> BED = HELPER.createTileEntity("bed", FBedTileEntity::new, () -> new Block[]{});
+	public static final RegistryObject<TileEntityType<FBedTileEntity>> BED = HELPER.createTileEntity("bed", FBedTileEntity::new, () -> ColoredBlocks.BEDS);
 	
 }

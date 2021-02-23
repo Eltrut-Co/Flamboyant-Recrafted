@@ -7,6 +7,8 @@ import javax.annotation.Nullable;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+import com.minecraftabnormals.abnormals_core.core.util.item.filling.TargetedItemGroupFiller;
+
 import eltrut.flamboyant.common.color.FDyeColor;
 import eltrut.flamboyant.common.tileentities.FBedTileEntity;
 import net.minecraft.block.AbstractBlock;
@@ -17,14 +19,15 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.material.PushReaction;
-import net.minecraft.client.renderer.model.IBakedModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.merchant.villager.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.EnumProperty;
@@ -37,6 +40,7 @@ import net.minecraft.util.ActionResultType;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.TransportationHelper;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -53,10 +57,9 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.ICollisionReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class FBedBlock extends HorizontalBlock {
+	
 	public static final EnumProperty<BedPart> PART = BlockStateProperties.BED_PART;
 	public static final BooleanProperty OCCUPIED = BlockStateProperties.OCCUPIED;
 	protected static final VoxelShape BED_BASE_SHAPE = Block.makeCuboidShape(0.0D, 3.0D, 0.0D, 16.0D, 9.0D, 16.0D);
@@ -69,6 +72,8 @@ public class FBedBlock extends HorizontalBlock {
 	protected static final VoxelShape WEST_FACING_SHAPE = VoxelShapes.or(BED_BASE_SHAPE, CORNER_NW, CORNER_SW);
 	protected static final VoxelShape EAST_FACING_SHAPE = VoxelShapes.or(BED_BASE_SHAPE, CORNER_NE, CORNER_SE);
 	private final FDyeColor color;
+	
+	private static final TargetedItemGroupFiller FILLER = new TargetedItemGroupFiller(() -> Items.BLACK_BED);
 
 	public FBedBlock(FDyeColor colorIn, AbstractBlock.Properties properties) {
 		super(properties);
@@ -78,12 +83,12 @@ public class FBedBlock extends HorizontalBlock {
 	}
 
 	@Nullable
-	@OnlyIn(Dist.CLIENT)
 	public static Direction getBedDirection(IBlockReader reader, BlockPos pos) {
 		BlockState blockstate = reader.getBlockState(pos);
 		return blockstate.getBlock() instanceof BedBlock ? blockstate.get(HORIZONTAL_FACING) : null;
 	}
 
+	@Override
 	public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player,
 			Hand handIn, BlockRayTraceResult hit) {
 		if (worldIn.isRemote) {
@@ -141,17 +146,12 @@ public class FBedBlock extends HorizontalBlock {
 		}
 	}
 
-	/**
-	 * Block's chance to react to a living entity falling on it.
-	 */
+	@Override
 	public void onFallenUpon(World worldIn, BlockPos pos, Entity entityIn, float fallDistance) {
 		super.onFallenUpon(worldIn, pos, entityIn, fallDistance * 0.5F);
 	}
 
-	/**
-	 * Called when an Entity lands on this Block. This method *must* update motionY
-	 * because the entity will not do that on its own
-	 */
+	@Override
 	public void onLanded(IBlockReader worldIn, Entity entityIn) {
 		if (entityIn.isSuppressingBounce()) {
 			super.onLanded(worldIn, entityIn);
@@ -170,13 +170,7 @@ public class FBedBlock extends HorizontalBlock {
 
 	}
 
-	/**
-	 * Update the provided state given the provided neighbor facing and neighbor
-	 * state, returning a new state. For example, fences make their connections to
-	 * the passed in state if possible, and wet concrete powder immediately returns
-	 * its solidified counterpart. Note that this method should ideally consider
-	 * only the specific face passed in.
-	 */
+	@Override
 	public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn,
 			BlockPos currentPos, BlockPos facingPos) {
 		if (facing == getDirectionToOther(stateIn.get(PART), stateIn.get(HORIZONTAL_FACING))) {
@@ -188,18 +182,11 @@ public class FBedBlock extends HorizontalBlock {
 		}
 	}
 
-	/**
-	 * Given a bed part and the direction it's facing, find the direction to move to
-	 * get the other bed part
-	 */
 	private static Direction getDirectionToOther(BedPart part, Direction direction) {
 		return part == BedPart.FOOT ? direction : direction.getOpposite();
 	}
 
-	/**
-	 * Called before the Block is set to air in the world. Called regardless of if
-	 * the player's tool can actually collect this block
-	 */
+	@Override
 	public void onBlockHarvested(World worldIn, BlockPos pos, BlockState state, PlayerEntity player) {
 		if (!worldIn.isRemote && player.isCreative()) {
 			BedPart bedpart = state.get(PART);
@@ -217,6 +204,7 @@ public class FBedBlock extends HorizontalBlock {
 	}
 
 	@Nullable
+	@Override
 	public BlockState getStateForPlacement(BlockItemUseContext context) {
 		Direction direction = context.getPlacementHorizontalFacing();
 		BlockPos blockpos = context.getPos();
@@ -226,6 +214,7 @@ public class FBedBlock extends HorizontalBlock {
 				: null;
 	}
 
+	@Override
 	public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
 		Direction direction = getFootDirection(state).getOpposite();
 		switch (direction) {
@@ -245,7 +234,6 @@ public class FBedBlock extends HorizontalBlock {
 		return state.get(PART) == BedPart.HEAD ? direction.getOpposite() : direction;
 	}
 
-	@OnlyIn(Dist.CLIENT)
 	public static TileEntityMerger.Type getMergeType(BlockState state) {
 		BedPart bedpart = state.get(PART);
 		return bedpart == BedPart.HEAD ? TileEntityMerger.Type.FIRST : TileEntityMerger.Type.SECOND;
@@ -315,26 +303,17 @@ public class FBedBlock extends HorizontalBlock {
 		return Optional.empty();
 	}
 
-	/**
-	 * @deprecated call via {@link IBlockState#getMobilityFlag()} whenever possible.
-	 *             Implementing/overriding is fine.
-	 */
+	@Override
 	public PushReaction getPushReaction(BlockState state) {
 		return PushReaction.DESTROY;
 	}
 
-	/**
-	 * The type of render function called. MODEL for mixed tesr and static model,
-	 * MODELBLOCK_ANIMATED for TESR-only, LIQUID for vanilla liquids, INVISIBLE to
-	 * skip all rendering
-	 * 
-	 * @deprecated call via {@link IBlockState#getRenderType()} whenever possible.
-	 *             Implementing/overriding is fine.
-	 */
+	@Override
 	public BlockRenderType getRenderType(BlockState state) {
 		return BlockRenderType.ENTITYBLOCK_ANIMATED;
 	}
 
+	@Override
 	protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
 		builder.add(HORIZONTAL_FACING, PART, OCCUPIED);
 	}
@@ -343,10 +322,7 @@ public class FBedBlock extends HorizontalBlock {
 		return new FBedTileEntity(this.color);
 	}
 
-	/**
-	 * Called by ItemBlocks after a block is set in the world, to allow post-place
-	 * logic
-	 */
+	@Override
 	public void onBlockPlacedBy(World worldIn, BlockPos pos, BlockState state, @Nullable LivingEntity placer,
 			ItemStack stack) {
 		super.onBlockPlacedBy(worldIn, pos, state, placer, stack);
@@ -359,21 +335,17 @@ public class FBedBlock extends HorizontalBlock {
 
 	}
 
-	@OnlyIn(Dist.CLIENT)
 	public FDyeColor getColor() {
 		return this.color;
 	}
-
-	/**
-	 * Return a random long to be passed to {@link IBakedModel#getQuads}, used for
-	 * random model rotations
-	 */
-	@OnlyIn(Dist.CLIENT)
+	
+	@Override
 	public long getPositionRandom(BlockState state, BlockPos pos) {
 		BlockPos blockpos = pos.offset(state.get(HORIZONTAL_FACING), state.get(PART) == BedPart.HEAD ? 0 : 1);
 		return MathHelper.getCoordinateRandom(blockpos.getX(), pos.getY(), blockpos.getZ());
 	}
 
+	@Override
 	public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type) {
 		return false;
 	}
@@ -404,4 +376,10 @@ public class FBedBlock extends HorizontalBlock {
 	private static int[][] func_242655_a(Direction direction) {
 		return new int[][] { { 0, 0 }, { -direction.getXOffset(), -direction.getZOffset() } };
 	}
+	
+	@Override
+	public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+		FILLER.fillItem(this.asItem(), group, items);
+	}
+	
 }

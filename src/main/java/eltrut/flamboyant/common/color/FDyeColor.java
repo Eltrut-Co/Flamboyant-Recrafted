@@ -11,116 +11,119 @@ import net.minecraft.util.IStringSerializable;
 
 public class FDyeColor implements IStringSerializable {
 
-	   private static final ArrayList<FDyeColor> VALUES = new ArrayList<FDyeColor>();
+	// TODO: figure out what is going on here
+	private static final ArrayList<FDyeColor> VALUES = new ArrayList<FDyeColor>();
 //	   private static final Int2ObjectOpenHashMap<FDyeColor> BY_FIREWORK_COLOR = new Int2ObjectOpenHashMap<>(Arrays.stream(values()).collect(Collectors.toMap((color) -> {
 //	      return color.fireworkColor;
 //	   }, (color) -> {
 //	      return color;
 //	   })));
-	   private final int id;
-	   private final String translationKey;
-	   private final MaterialColor mapColor;
-	   private final int colorValue;
-	   private final int swappedColorValue;
-	   private final float[] colorComponentValues;
-	   private final int fireworkColor;
-	   private final net.minecraftforge.common.Tags.IOptionalNamedTag<Item> tag;
-	   private final int textColor;
+	private final int id;
+	private final String translationKey;
+	private final MaterialColor mapColor;
+	private final int colorValue;
+	private final int swappedColorValue;
+	private final float[] colorComponentValues;
+	private final int fireworkColor;
+	private final net.minecraftforge.common.Tags.IOptionalNamedTag<Item> tag;
+	private final int textColor;
 
-	   public FDyeColor(int idIn, String translationKeyIn, int colorValueIn, MaterialColor mapColorIn, int fireworkColorIn, int textColorIn) {
-	      this.id = idIn;
-	      this.translationKey = translationKeyIn;
-	      this.colorValue = colorValueIn;
-	      this.mapColor = mapColorIn;
-	      this.textColor = textColorIn;
-	      int i = (colorValueIn & 16711680) >> 16;
-	      int j = (colorValueIn & '\uff00') >> 8;
-	      int k = (colorValueIn & 255) >> 0;
-	      this.swappedColorValue = k << 16 | j << 8 | i << 0;
-	      this.tag = net.minecraft.tags.ItemTags.createOptional(new net.minecraft.util.ResourceLocation("forge", "dyes/" + translationKeyIn));
-	      this.colorComponentValues = new float[]{(float)i / 255.0F, (float)j / 255.0F, (float)k / 255.0F};
-	      this.fireworkColor = fireworkColorIn;
-	      
-	      VALUES.add(this);
-	   }
+	public FDyeColor(int idIn, String translationKeyIn, int colorValueIn, MaterialColor mapColorIn, int fireworkColorIn,
+			int textColorIn) {
+		this.id = idIn;
+		this.translationKey = translationKeyIn;
+		this.colorValue = colorValueIn;
+		this.mapColor = mapColorIn;
+		this.textColor = textColorIn;
+		int i = (colorValueIn & 16711680) >> 16;
+		int j = (colorValueIn & '\uff00') >> 8;
+		int k = (colorValueIn & 255) >> 0;
+		this.swappedColorValue = k << 16 | j << 8 | i << 0;
+		this.tag = net.minecraft.tags.ItemTags
+				.createOptional(new net.minecraft.util.ResourceLocation("forge", "dyes/" + translationKeyIn));
+		this.colorComponentValues = new float[] { (float) i / 255.0F, (float) j / 255.0F, (float) k / 255.0F };
+		this.fireworkColor = fireworkColorIn;
 
-	   public int getId() {
-	      return this.id;
-	   }
+		VALUES.add(this);
+	}
 
-	   public String getTranslationKey() {
-	      return this.translationKey;
-	   }
+	public int getId() {
+		return this.id;
+	}
 
-	   /**
-	    * Gets an array containing 3 floats ranging from 0.0 to 1.0: the red, green, and blue components of the
-	    * corresponding color.
-	    */
-	   public float[] getColorComponentValues() {
-	      return this.colorComponentValues;
-	   }
+	public String getTranslationKey() {
+		return this.translationKey;
+	}
 
-	   public MaterialColor getMapColor() {
-	      return this.mapColor;
-	   }
+	/**
+	 * Gets an array containing 3 floats ranging from 0.0 to 1.0: the red, green,
+	 * and blue components of the corresponding color.
+	 */
+	public float[] getColorComponentValues() {
+		return this.colorComponentValues;
+	}
 
-	   public int getFireworkColor() {
-	      return this.fireworkColor;
-	   }
+	public MaterialColor getMapColor() {
+		return this.mapColor;
+	}
 
-	   public int getTextColor() {
-	      return this.textColor;
-	   }
+	public int getFireworkColor() {
+		return this.fireworkColor;
+	}
 
-	   public static FDyeColor byId(int colorId) {
-	      if (colorId < 0 || colorId >= VALUES.size()) {
-	         colorId = 0;
-	      }
+	public int getTextColor() {
+		return this.textColor;
+	}
 
-	      return VALUES.get(colorId);
-	   }
+	public static FDyeColor byId(int colorId) {
+		if (colorId < 0 || colorId >= VALUES.size()) {
+			colorId = 0;
+		}
 
-	   public static FDyeColor byTranslationKey(String translationKeyIn, FDyeColor fallback) {
-	      for(FDyeColor dyecolor : VALUES) {
-	         if (dyecolor.translationKey.equals(translationKeyIn)) {
-	            return dyecolor;
-	         }
-	      }
+		return VALUES.get(colorId);
+	}
 
-	      return fallback;
-	   }
+	public static FDyeColor byTranslationKey(String translationKeyIn, FDyeColor fallback) {
+		for (FDyeColor dyecolor : VALUES) {
+			if (dyecolor.translationKey.equals(translationKeyIn)) {
+				return dyecolor;
+			}
+		}
+
+		return fallback;
+	}
 
 //	   @Nullable
 //	   public static FDyeColor byFireworkColor(int fireworkColorIn) {
 //	      return BY_FIREWORK_COLOR.get(fireworkColorIn);
 //	   }
 
-	   public String toString() {
-	      return this.translationKey;
-	   }
+	public String toString() {
+		return this.translationKey;
+	}
 
-	   public String getString() {
-	      return this.translationKey;
-	   }
+	public String getString() {
+		return this.translationKey;
+	}
 
-	   public int getColorValue() {
-	      return colorValue;
-	   }
+	public int getColorValue() {
+		return colorValue;
+	}
 
-	   public net.minecraftforge.common.Tags.IOptionalNamedTag<Item> getTag() {
-	      return tag;
-	   }
+	public net.minecraftforge.common.Tags.IOptionalNamedTag<Item> getTag() {
+		return tag;
+	}
 
-	   @Nullable
-	   public static FDyeColor getColor(ItemStack stack) {
+	@Nullable
+	public static FDyeColor getColor(ItemStack stack) {
 //	      if (stack.getItem() instanceof DyeItem)
 //	         return ((DyeItem)stack.getItem()).getDyeColor();
 
-	      for (FDyeColor color : VALUES) {
-	         if (stack.getItem().isIn(color.getTag()))
-	             return color;
-	      }
+		for (FDyeColor color : VALUES) {
+			if (stack.getItem().isIn(color.getTag()))
+				return color;
+		}
 
-	      return null;
-	   }
+		return null;
+	}
 }

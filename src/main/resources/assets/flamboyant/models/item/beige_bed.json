@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/template_bed",
   "textures": {
-    "particle": "flamboyant:block/amber_wool"
+    "particle": "flamboyant:block/beige_wool"
   }
 }

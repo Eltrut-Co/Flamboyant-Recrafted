@@ -5,8 +5,6 @@ import eltrut.flamboyant.common.color.FDyeColor;
 import eltrut.flamboyant.core.registry.FlamboyantTileEntities;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class FBedTileEntity extends TileEntity {
 
@@ -25,10 +23,9 @@ public class FBedTileEntity extends TileEntity {
 		return new SUpdateTileEntityPacket(this.pos, 11, this.getUpdateTag());
 	}
 
-	@OnlyIn(Dist.CLIENT)
 	public FDyeColor getColor() {
 		if (this.color == null) {
-			this.color = ((FBedBlock) this.getBlockState().getBlock()).getColor();
+			this.color = ((FBedBlock)this.getBlockState().getBlock()).getColor();
 		}
 
 		return this.color;

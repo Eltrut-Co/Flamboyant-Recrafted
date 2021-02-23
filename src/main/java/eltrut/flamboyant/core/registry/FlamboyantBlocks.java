@@ -3,18 +3,23 @@ package eltrut.flamboyant.core.registry;
 import com.minecraftabnormals.abnormals_core.common.blocks.InjectedBlock;
 import com.minecraftabnormals.abnormals_core.core.util.registry.BlockSubRegistryHelper;
 
+import eltrut.flamboyant.common.blocks.FBedBlock;
 import eltrut.flamboyant.common.blocks.FCarpetBlock;
 import eltrut.flamboyant.common.blocks.FConcretePowderBlock;
 import eltrut.flamboyant.common.blocks.FGlazedTerracottaBlock;
 import eltrut.flamboyant.common.blocks.FStainedGlassBlock;
 import eltrut.flamboyant.common.blocks.FStainedGlassPaneBlock;
+import eltrut.flamboyant.common.color.FDyeColor;
+import eltrut.flamboyant.common.color.FDyeColors;
 import eltrut.flamboyant.core.Flamboyant;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Items;
+import net.minecraft.state.properties.BedPart;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
@@ -160,6 +165,29 @@ public class FlamboyantBlocks {
 	public static final RegistryObject<Block> SLATE_GRAY_STAINED_GLASS_PANE = HELPER.createBlock("slate_gray_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
 	public static final RegistryObject<Block> VIOLET_STAINED_GLASS_PANE = HELPER.createBlock("violet_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
 	
+	public static final RegistryObject<Block> AMBER_BED = HELPER.createBlock("amber_bed", () -> createBedFromColor(FDyeColors.AMBER), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> BEIGE_BED = HELPER.createBlock("beige_bed", () -> createBedFromColor(FDyeColors.BEIGE), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> CREAM_BED = HELPER.createBlock("cream_bed", () -> createBedFromColor(FDyeColors.CREAM), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> DARK_GREEN_BED = HELPER.createBlock("dark_green_bed", () -> createBedFromColor(FDyeColors.DARK_GREEN), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> FOREST_GREEN_BED = HELPER.createBlock("forest_green_bed", () -> createBedFromColor(FDyeColors.FOREST_GREEN), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> HOT_PINK_BED = HELPER.createBlock("hot_pink_bed", () -> createBedFromColor(FDyeColors.HOT_PINK), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> INDIGO_BED = HELPER.createBlock("indigo_bed", () -> createBedFromColor(FDyeColors.INDIGO), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> MAROON_BED = HELPER.createBlock("maroon_bed", () -> createBedFromColor(FDyeColors.MAROON), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> NAVY_BED = HELPER.createBlock("navy_bed", () -> createBedFromColor(FDyeColors.NAVY), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> OLIVE_BED = HELPER.createBlock("olive_bed", () -> createBedFromColor(FDyeColors.OLIVE), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> PALE_GREEN_BED = HELPER.createBlock("pale_green_bed", () -> createBedFromColor(FDyeColors.PALE_GREEN), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> PALE_PINK_BED = HELPER.createBlock("pale_pink_bed", () -> createBedFromColor(FDyeColors.PALE_PINK), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> PALE_YELLOW_BED = HELPER.createBlock("pale_yellow_bed", () -> createBedFromColor(FDyeColors.PALE_YELLOW), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> SKY_BLUE_BED = HELPER.createBlock("sky_blue_bed", () -> createBedFromColor(FDyeColors.SKY_BLUE), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> SLATE_GRAY_BED = HELPER.createBlock("slate_gray_bed", () -> createBedFromColor(FDyeColors.SLATE_GRAY), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> VIOLET_BED = HELPER.createBlock("violet_bed", () -> createBedFromColor(FDyeColors.VIOLET), ItemGroup.DECORATIONS);
+	
+	private static FBedBlock createBedFromColor(FDyeColor color) {
+		return new FBedBlock(color, AbstractBlock.Properties.create(Material.WOOL, (state) -> {
+	         return state.get(FBedBlock.PART) == BedPart.FOOT ? color.getMapColor() : MaterialColor.WOOL;
+	      }).sound(SoundType.WOOD).hardnessAndResistance(0.2F).notSolid());
+	}
+	
 	public static class Properties {
 		
 		public static final Block.Properties WOOL = AbstractBlock.Properties.create(Material.WOOL).hardnessAndResistance(0.8F).sound(SoundType.CLOTH);
@@ -182,6 +210,7 @@ public class FlamboyantBlocks {
 		public static final Block[] CONCRETE_POWDER = {AMBER_CONCRETE_POWDER.get(), BEIGE_CONCRETE_POWDER.get(), CREAM_CONCRETE_POWDER.get(), DARK_GREEN_CONCRETE_POWDER.get(), FOREST_GREEN_CONCRETE_POWDER.get(), HOT_PINK_CONCRETE_POWDER.get(), INDIGO_CONCRETE_POWDER.get(), MAROON_CONCRETE_POWDER.get(), NAVY_CONCRETE_POWDER.get(), OLIVE_CONCRETE_POWDER.get(), PALE_GREEN_CONCRETE_POWDER.get(), PALE_PINK_CONCRETE_POWDER.get(), PALE_YELLOW_CONCRETE_POWDER.get(), SKY_BLUE_CONCRETE_POWDER.get(), SLATE_GRAY_CONCRETE_POWDER.get(), VIOLET_CONCRETE_POWDER.get()};
 		public static final Block[] STAINED_GLASS = {AMBER_STAINED_GLASS.get(), BEIGE_STAINED_GLASS.get(), CREAM_STAINED_GLASS.get(), DARK_GREEN_STAINED_GLASS.get(), FOREST_GREEN_STAINED_GLASS.get(), HOT_PINK_STAINED_GLASS.get(), INDIGO_STAINED_GLASS.get(), MAROON_STAINED_GLASS.get(), NAVY_STAINED_GLASS.get(), OLIVE_STAINED_GLASS.get(), PALE_GREEN_STAINED_GLASS.get(), PALE_PINK_STAINED_GLASS.get(), PALE_YELLOW_STAINED_GLASS.get(), SKY_BLUE_STAINED_GLASS.get(), SLATE_GRAY_STAINED_GLASS.get(), VIOLET_STAINED_GLASS.get()};
 		public static final Block[] STAINED_GLASS_PANES = {AMBER_STAINED_GLASS_PANE.get(), BEIGE_STAINED_GLASS_PANE.get(), CREAM_STAINED_GLASS_PANE.get(), DARK_GREEN_STAINED_GLASS_PANE.get(), FOREST_GREEN_STAINED_GLASS_PANE.get(), HOT_PINK_STAINED_GLASS_PANE.get(), INDIGO_STAINED_GLASS_PANE.get(), MAROON_STAINED_GLASS_PANE.get(), NAVY_STAINED_GLASS_PANE.get(), OLIVE_STAINED_GLASS_PANE.get(), PALE_GREEN_STAINED_GLASS_PANE.get(), PALE_PINK_STAINED_GLASS_PANE.get(), PALE_YELLOW_STAINED_GLASS_PANE.get(), SKY_BLUE_STAINED_GLASS_PANE.get(), SLATE_GRAY_STAINED_GLASS_PANE.get(), VIOLET_STAINED_GLASS_PANE.get()};
+		public static final Block[] BEDS = {AMBER_BED.get(), BEIGE_BED.get(), CREAM_BED.get(), DARK_GREEN_BED.get(), FOREST_GREEN_BED.get(), HOT_PINK_BED.get(), INDIGO_BED.get(), MAROON_BED.get(), NAVY_BED.get(), OLIVE_BED.get(), PALE_GREEN_BED.get(), PALE_PINK_BED.get(), PALE_YELLOW_BED.get(), SKY_BLUE_BED.get(), SLATE_GRAY_BED.get(), VIOLET_BED.get()};
 		
 	}
 	
