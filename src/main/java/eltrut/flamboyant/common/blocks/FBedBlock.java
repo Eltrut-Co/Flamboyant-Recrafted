@@ -12,7 +12,6 @@ import com.minecraftabnormals.abnormals_core.core.util.item.filling.TargetedItem
 import eltrut.flamboyant.common.color.FDyeColor;
 import eltrut.flamboyant.common.tileentities.FBedTileEntity;
 import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.BedBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
@@ -85,7 +84,7 @@ public class FBedBlock extends HorizontalBlock {
 	@Nullable
 	public static Direction getBedDirection(IBlockReader reader, BlockPos pos) {
 		BlockState blockstate = reader.getBlockState(pos);
-		return blockstate.getBlock() instanceof BedBlock ? blockstate.get(HORIZONTAL_FACING) : null;
+		return blockstate.getBlock() instanceof FBedBlock ? blockstate.get(HORIZONTAL_FACING) : null;
 	}
 
 	@Override
@@ -240,7 +239,7 @@ public class FBedBlock extends HorizontalBlock {
 	}
 
 	private static boolean isBedBelow(IBlockReader blockReader, BlockPos pos) {
-		return blockReader.getBlockState(pos.down()).getBlock() instanceof BedBlock;
+		return blockReader.getBlockState(pos.down()).getBlock() instanceof FBedBlock;
 	}
 
 	public static Optional<Vector3d> func_242652_a(EntityType<?> type, ICollisionReader collisionReader, BlockPos pos,
