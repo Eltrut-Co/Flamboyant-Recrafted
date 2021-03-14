@@ -11,6 +11,7 @@ import com.minecraftabnormals.abnormals_core.core.util.item.filling.TargetedItem
 
 import eltrut.flamboyant.common.color.FDyeColor;
 import eltrut.flamboyant.common.tileentities.FBedTileEntity;
+import eltrut.flamboyant.core.registry.FlamboyantTileEntities;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
@@ -379,6 +380,16 @@ public class FBedBlock extends HorizontalBlock {
 	@Override
 	public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
 		FILLER.fillItem(this.asItem(), group, items);
+	}
+	
+	@Override
+	public boolean hasTileEntity(BlockState state) {
+		return true;
+	}
+	
+	@Override
+	public TileEntity createTileEntity(BlockState state, IBlockReader world) {
+		return FlamboyantTileEntities.BED.get().create();
 	}
 	
 }
