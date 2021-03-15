@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import co.eltrut.differentiate.core.registrator.Registrator;
 import co.eltrut.flamboyant.core.other.FlamboyantCompat;
 import co.eltrut.flamboyant.core.registrator.FBlockHelper;
+import co.eltrut.flamboyant.core.registry.FlamboyantTileEntities;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -27,9 +28,12 @@ public class Flamboyant {
 
     public Flamboyant() {
     	REGISTRATOR.getHelpers().put(ForgeRegistries.BLOCKS, new FBlockHelper(REGISTRATOR));
+    	
         modEventBus.addListener(this::doCommonStuff);
         modEventBus.addListener(this::doClientStuff);
         instance = this;
+        
+        FlamboyantTileEntities.REGISTER.register(modEventBus);
         
         MinecraftForge.EVENT_BUS.register(this);
     }
