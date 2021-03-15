@@ -1,8 +1,8 @@
-package eltrut.flamboyant.common.tileentities;
+package co.eltrut.flamboyant.common.tileentities;
 
-import eltrut.flamboyant.common.blocks.FBedBlock;
-import eltrut.flamboyant.common.color.FDyeColor;
-import eltrut.flamboyant.core.registry.FlamboyantTileEntities;
+import co.eltrut.flamboyant.common.blocks.FBedBlock;
+import co.eltrut.flamboyant.common.color.FDyeColor;
+import co.eltrut.flamboyant.core.registry.FlamboyantTileEntities;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
 import net.minecraft.tileentity.TileEntity;
 

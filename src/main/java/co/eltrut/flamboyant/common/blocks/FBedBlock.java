@@ -1,4 +1,4 @@
-package eltrut.flamboyant.common.blocks;
+package co.eltrut.flamboyant.common.blocks;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,11 +7,10 @@ import javax.annotation.Nullable;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-import com.minecraftabnormals.abnormals_core.core.util.item.filling.TargetedItemGroupFiller;
-
-import eltrut.flamboyant.common.color.FDyeColor;
-import eltrut.flamboyant.common.tileentities.FBedTileEntity;
-import eltrut.flamboyant.core.registry.FlamboyantTileEntities;
+import co.eltrut.differentiate.core.util.GroupUtil;
+import co.eltrut.flamboyant.common.color.FDyeColor;
+import co.eltrut.flamboyant.common.tileentities.FBedTileEntity;
+import co.eltrut.flamboyant.core.registry.FlamboyantTileEntities;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
@@ -72,8 +71,6 @@ public class FBedBlock extends HorizontalBlock {
 	protected static final VoxelShape WEST_FACING_SHAPE = VoxelShapes.or(BED_BASE_SHAPE, CORNER_NW, CORNER_SW);
 	protected static final VoxelShape EAST_FACING_SHAPE = VoxelShapes.or(BED_BASE_SHAPE, CORNER_NE, CORNER_SE);
 	private final FDyeColor color;
-	
-	private static final TargetedItemGroupFiller FILLER = new TargetedItemGroupFiller(() -> Items.BLACK_BED);
 
 	public FBedBlock(FDyeColor colorIn, AbstractBlock.Properties properties) {
 		super(properties);
@@ -379,7 +376,7 @@ public class FBedBlock extends HorizontalBlock {
 	
 	@Override
 	public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
-		FILLER.fillItem(this.asItem(), group, items);
+		GroupUtil.fillItem(this.asItem(), Items.BLACK_BED, group, items);
 	}
 	
 	@Override

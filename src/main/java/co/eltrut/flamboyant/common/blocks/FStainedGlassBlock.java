@@ -1,18 +1,18 @@
-package eltrut.flamboyant.common.blocks;
+package co.eltrut.flamboyant.common.blocks;
 
-import com.minecraftabnormals.abnormals_core.core.util.item.filling.TargetedItemGroupFiller;
-
+import co.eltrut.differentiate.common.interf.IRenderTypeBlock;
+import co.eltrut.differentiate.core.util.GroupUtil;
 import net.minecraft.block.AbstractGlassBlock;
 import net.minecraft.block.IBeaconBeamColorProvider;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.item.DyeColor;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.NonNullList;
 
-public class FStainedGlassBlock extends AbstractGlassBlock implements IBeaconBeamColorProvider {
-	private static final TargetedItemGroupFiller FILLER = new TargetedItemGroupFiller(() -> Items.BLACK_STAINED_GLASS);
-
+public class FStainedGlassBlock extends AbstractGlassBlock implements IBeaconBeamColorProvider, IRenderTypeBlock {
+	
 	public FStainedGlassBlock(Properties properties) {
 		super(properties);
 	}
@@ -24,7 +24,12 @@ public class FStainedGlassBlock extends AbstractGlassBlock implements IBeaconBea
 	
 	@Override
 	public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
-		FILLER.fillItem(this.asItem(), group, items);
+		GroupUtil.fillItem(this.asItem(), Items.BLACK_STAINED_GLASS, group, items);
+	}
+
+	@Override
+	public RenderType getRenderType() {
+		return RenderType.getTranslucent();
 	}
 
 }

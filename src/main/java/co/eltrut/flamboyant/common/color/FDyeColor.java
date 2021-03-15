@@ -1,4 +1,4 @@
-package eltrut.flamboyant.common.color;
+package co.eltrut.flamboyant.common.color;
 
 import java.util.ArrayList;
 

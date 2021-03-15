@@ -14,7 +14,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = "${mc_version}-${mod_version}"
-group = 'eltrut.flamboyant' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = 'co.eltrut.flamboyant'
 archivesBaseName = 'flamboyant'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
@@ -30,7 +30,7 @@ minecraft {
 			jvmArg "-Dmixin.env.disableRefMap=true"
 
             mods {
-                examplemod {
+                flamboyant {
                     source sourceSets.main
                 }
             }
@@ -44,7 +44,7 @@ minecraft {
 			jvmArg "-Dmixin.env.disableRefMap=true"
 
             mods {
-                examplemod {
+                flamboyant {
                     source sourceSets.main
                 }
             }
@@ -54,13 +54,12 @@ minecraft {
             workingDirectory project.file('run')
 
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-
             property 'forge.logging.console.level', 'debug'
-
-            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/')
+            args '--mod', 'flamboyant', '--all', '--output', file('src/generated/resources/')
+			jvmArg "-Dmixin.env.disableRefMap=true"
 
             mods {
-                examplemod {
+                flamboyant {
                     source sourceSets.main
                 }
             }
@@ -70,11 +69,11 @@ minecraft {
 
 dependencies {
     minecraft "net.minecraftforge:forge:${project.mc_version}-${project.forge_version}"
-    implementation fg.deobf("curse.maven:abnormals-core-382216:${ac_id}")
+	implementation fg.deobf("curse.maven:differentiate-450748:${differentiate_id}")
+    //implementation fg.deobf("curse.maven:abnormals-core-382216:${ac_id}")
 	
-    implementation fg.deobf("curse.maven:autoreglib-250363:${arl_id}")
-    implementation fg.deobf("curse.maven:quark-243121:${quark_id}")
-
+    //implementation fg.deobf("curse.maven:autoreglib-250363:${arl_id}")
+    //implementation fg.deobf("curse.maven:quark-243121:${quark_id}")
 }
 
 repositories {

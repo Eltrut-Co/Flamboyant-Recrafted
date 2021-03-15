@@ -1,9 +1,9 @@
-package eltrut.flamboyant.client.renderer;
+package co.eltrut.flamboyant.client.renderer;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 
-import eltrut.flamboyant.common.color.FDyeColor;
-import eltrut.flamboyant.common.tileentities.FBedTileEntity;
+import co.eltrut.flamboyant.common.color.FDyeColor;
+import co.eltrut.flamboyant.common.tileentities.FBedTileEntity;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.model.ItemCameraTransforms.TransformType;
 import net.minecraft.client.renderer.tileentity.ItemStackTileEntityRenderer;

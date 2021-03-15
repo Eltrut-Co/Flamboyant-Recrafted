@@ -1,11 +1,11 @@
-package eltrut.flamboyant.client.renderer;
+package co.eltrut.flamboyant.client.renderer;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 
-import eltrut.flamboyant.common.blocks.FBedBlock;
-import eltrut.flamboyant.common.tileentities.FBedTileEntity;
-import eltrut.flamboyant.core.registry.FlamboyantTileEntities;
+import co.eltrut.flamboyant.common.blocks.FBedBlock;
+import co.eltrut.flamboyant.common.tileentities.FBedTileEntity;
+import co.eltrut.flamboyant.core.registry.FlamboyantTileEntities;
 import it.unimi.dsi.fastutil.ints.Int2IntFunction;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ChestBlock;

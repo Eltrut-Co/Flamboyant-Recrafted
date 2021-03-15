@@ -1,7 +1,6 @@
-package eltrut.flamboyant.common.blocks;
+package co.eltrut.flamboyant.common.blocks;
 
-import com.minecraftabnormals.abnormals_core.core.util.item.filling.TargetedItemGroupFiller;
-
+import co.eltrut.differentiate.core.util.GroupUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -19,7 +18,6 @@ import net.minecraft.world.IWorldReader;
 
 public class FCarpetBlock extends Block {
 	protected static final VoxelShape SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
-	private static final TargetedItemGroupFiller FILLER = new TargetedItemGroupFiller(() -> Items.BLACK_CARPET);
 
 	public FCarpetBlock(Properties properties) {
 		super(properties);
@@ -42,7 +40,7 @@ public class FCarpetBlock extends Block {
 	
 	@Override
 	public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
-		FILLER.fillItem(this.asItem(), group, items);
+		GroupUtil.fillItem(this.asItem(), Items.BLACK_CARPET, group, items);
 	}
 	
 }
