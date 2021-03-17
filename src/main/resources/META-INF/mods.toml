@@ -28,8 +28,8 @@ A §msimple§r mod that adds 16 colors to the game on top of the 16 we already h
     side="BOTH"
 
 [[dependencies.flamboyant]]
-    modId="abnormals_core"
+    modId="differentiate"
     mandatory=true
-    versionRange="[3.0.0,)"
+    versionRange="[0.3.2,)"
     ordering="AFTER"
     side="BOTH"
