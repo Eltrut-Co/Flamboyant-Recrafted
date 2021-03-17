@@ -6,7 +6,7 @@ import co.eltrut.flamboyant.core.registry.FlamboyantTileEntities;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
 import net.minecraft.tileentity.TileEntity;
 
-public class FBedTileEntity extends TileEntity {
+public class FBedTileEntity extends TileEntity /*implements IRendererTileEntity<FBedTileEntity>*/ {
 
 	private FDyeColor color;
 
@@ -35,5 +35,10 @@ public class FBedTileEntity extends TileEntity {
 	public void setColor(FDyeColor color) {
 		this.color = color;
 	}
+
+//	@Override
+//	public Function<? super TileEntityRendererDispatcher, ? extends TileEntityRenderer<? super FBedTileEntity>> getRendererFactory() {
+//		return FBedTileEntityRenderer::new;
+//	}
 
 }
