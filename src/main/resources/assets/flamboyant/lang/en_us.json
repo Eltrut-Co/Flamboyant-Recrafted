@@ -142,5 +142,21 @@
   "block.flamboyant.pale_yellow_stained_glass_pane": "Pale Yellow Stained Glass Pane",
   "block.flamboyant.sky_blue_stained_glass_pane": "Sky Blue Stained Glass Pane",
   "block.flamboyant.slate_gray_stained_glass_pane": "Slate Gray Stained Glass Pane",
-  "block.flamboyant.violet_stained_glass_pane": "Violet Stained Glass Pane"
+  "block.flamboyant.violet_stained_glass_pane": "Violet Stained Glass Pane",
+  "block.flamboyant.amber_bed": "Amber Bed",
+  "block.flamboyant.beige_bed": "Beige Bed",
+  "block.flamboyant.cream_bed": "Cream Bed",
+  "block.flamboyant.dark_green_bed": "Dark Green Bed",
+  "block.flamboyant.forest_green_bed": "Forest Green Bed",
+  "block.flamboyant.hot_pink_bed": "Hot Pink Bed",
+  "block.flamboyant.indigo_bed": "Indigo Bed",
+  "block.flamboyant.maroon_bed": "Maroon Bed",
+  "block.flamboyant.navy_bed": "Navy Bed",
+  "block.flamboyant.olive_bed": "Olive Bed",
+  "block.flamboyant.pale_green_bed": "Pale Green Bed",
+  "block.flamboyant.pale_pink_bed": "Pale Pink Bed",
+  "block.flamboyant.pale_yellow_bed": "Pale Yellow Bed",
+  "block.flamboyant.sky_blue_bed": "Sky Blue Bed",
+  "block.flamboyant.slate_gray_bed": "Slate Gray Bed",
+  "block.flamboyant.violet_bed": "Violet Bed"
 }
