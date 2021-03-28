@@ -11,7 +11,8 @@ public class FBedTileEntity extends TileEntity /*implements IRendererTileEntity<
 	private FDyeColor color;
 
 	public FBedTileEntity() {
-		super(FlamboyantTileEntities.BED.get());
+		super(null);
+//		super(FlamboyantTileEntities.BED.get());
 	}
 
 	public FBedTileEntity(FDyeColor colorIn) {

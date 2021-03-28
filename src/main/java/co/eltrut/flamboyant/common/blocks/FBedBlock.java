@@ -386,7 +386,8 @@ public class FBedBlock extends HorizontalBlock {
 	
 	@Override
 	public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-		return FlamboyantTileEntities.BED.get().create();
+		return null;
+//		return FlamboyantTileEntities.BED.get().create();
 	}
 	
 }

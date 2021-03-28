@@ -56,24 +56,24 @@ public class FBedTileEntityRenderer extends TileEntityRenderer<FBedTileEntity> {
 	@Override
 	public void render(FBedTileEntity tileEntityIn, float partialTicks, MatrixStack matrixStackIn,
 			IRenderTypeBuffer bufferIn, int combinedLightIn, int combinedOverlayIn) {
-		RenderMaterial rendermaterial = Atlases.BED_TEXTURES[tileEntityIn.getColor().getId()];
-		World world = tileEntityIn.getWorld();
-		if (world != null) {
-			BlockState blockstate = tileEntityIn.getBlockState();
-			TileEntityMerger.ICallbackWrapper<? extends FBedTileEntity> icallbackwrapper = TileEntityMerger
-					.func_226924_a_(FlamboyantTileEntities.BED.get(), FBedBlock::getMergeType, FBedBlock::getFootDirection,
-							ChestBlock.FACING, blockstate, world, tileEntityIn.getPos(), (p_228846_0_, p_228846_1_) -> {
-								return false;
-							});
-			int i = icallbackwrapper.<Int2IntFunction>apply(new DualBrightnessCallback<>()).get(combinedLightIn);
-			this.func_228847_a_(matrixStackIn, bufferIn, blockstate.get(FBedBlock.PART) == BedPart.HEAD,
-					blockstate.get(FBedBlock.HORIZONTAL_FACING), rendermaterial, i, combinedOverlayIn, false);
-		} else {
-			this.func_228847_a_(matrixStackIn, bufferIn, true, Direction.SOUTH, rendermaterial, combinedLightIn,
-					combinedOverlayIn, false);
-			this.func_228847_a_(matrixStackIn, bufferIn, false, Direction.SOUTH, rendermaterial, combinedLightIn,
-					combinedOverlayIn, true);
-		}
+//		RenderMaterial rendermaterial = Atlases.BED_TEXTURES[tileEntityIn.getColor().getId()];
+//		World world = tileEntityIn.getWorld();
+//		if (world != null) {
+//			BlockState blockstate = tileEntityIn.getBlockState();
+//			TileEntityMerger.ICallbackWrapper<? extends FBedTileEntity> icallbackwrapper = TileEntityMerger
+//					.func_226924_a_(FlamboyantTileEntities.BED.get(), FBedBlock::getMergeType, FBedBlock::getFootDirection,
+//							ChestBlock.FACING, blockstate, world, tileEntityIn.getPos(), (p_228846_0_, p_228846_1_) -> {
+//								return false;
+//							});
+//			int i = icallbackwrapper.<Int2IntFunction>apply(new DualBrightnessCallback<>()).get(combinedLightIn);
+//			this.func_228847_a_(matrixStackIn, bufferIn, blockstate.get(FBedBlock.PART) == BedPart.HEAD,
+//					blockstate.get(FBedBlock.HORIZONTAL_FACING), rendermaterial, i, combinedOverlayIn, false);
+//		} else {
+//			this.func_228847_a_(matrixStackIn, bufferIn, true, Direction.SOUTH, rendermaterial, combinedLightIn,
+//					combinedOverlayIn, false);
+//			this.func_228847_a_(matrixStackIn, bufferIn, false, Direction.SOUTH, rendermaterial, combinedLightIn,
+//					combinedOverlayIn, true);
+//		}
 
 	}
 

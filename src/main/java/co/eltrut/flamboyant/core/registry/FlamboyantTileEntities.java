@@ -15,6 +15,6 @@ public class FlamboyantTileEntities {
 	
 	public static final TileEntityHelper HELPER = Flamboyant.REGISTRATOR.getHelper(ForgeRegistries.TILE_ENTITIES);
 	
-	public static final RegistryObject<TileEntityType<FBedTileEntity>> BED = HELPER.createTileEntity("bed", FBedTileEntity::new, () -> ColoredBlocks.BEDS);
+//	public static final RegistryObject<TileEntityType<FBedTileEntity>> BED = HELPER.createTileEntity("bed", FBedTileEntity::new, () -> ColoredBlocks.BEDS);
 	
 }

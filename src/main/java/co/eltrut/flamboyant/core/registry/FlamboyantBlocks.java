@@ -1,6 +1,7 @@
 package co.eltrut.flamboyant.core.registry;
 
 import co.eltrut.differentiate.common.block.FollowBlock;
+import co.eltrut.differentiate.core.registrator.BlockHelper;
 import co.eltrut.flamboyant.common.blocks.FCarpetBlock;
 import co.eltrut.flamboyant.common.blocks.FConcretePowderBlock;
 import co.eltrut.flamboyant.common.blocks.FGlazedTerracottaBlock;
@@ -8,7 +9,6 @@ import co.eltrut.flamboyant.common.blocks.FStainedGlassBlock;
 import co.eltrut.flamboyant.common.blocks.FStainedGlassPaneBlock;
 import co.eltrut.flamboyant.common.color.FDyeColors;
 import co.eltrut.flamboyant.core.Flamboyant;
-import co.eltrut.flamboyant.core.registrator.FBlockHelper;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -23,7 +23,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 @Mod.EventBusSubscriber(modid = Flamboyant.MOD_ID, bus = Bus.MOD)
 public class FlamboyantBlocks {
 	
-	public static final FBlockHelper HELPER = Flamboyant.REGISTRATOR.getHelper(ForgeRegistries.BLOCKS);
+	public static final BlockHelper HELPER = Flamboyant.REGISTRATOR.getHelper(ForgeRegistries.BLOCKS);
 	
 	public static final RegistryObject<Block> AMBER_WOOL = HELPER.createSimpleBlock("amber_wool", () -> new FollowBlock(Properties.WOOL, Items.BLACK_WOOL), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> BEIGE_WOOL = HELPER.createSimpleBlock("beige_wool", () -> new FollowBlock(Properties.WOOL, Items.BLACK_WOOL), ItemGroup.BUILDING_BLOCKS);
@@ -161,22 +161,22 @@ public class FlamboyantBlocks {
 	public static final RegistryObject<Block> SLATE_GRAY_STAINED_GLASS_PANE = HELPER.createSimpleBlock("slate_gray_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
 	public static final RegistryObject<Block> VIOLET_STAINED_GLASS_PANE = HELPER.createSimpleBlock("violet_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.DECORATIONS);
 	
-	public static final RegistryObject<Block> AMBER_BED = HELPER.createBedBlock(FDyeColors.AMBER);
-	public static final RegistryObject<Block> BEIGE_BED = HELPER.createBedBlock(FDyeColors.BEIGE);
-	public static final RegistryObject<Block> CREAM_BED = HELPER.createBedBlock(FDyeColors.CREAM);
-	public static final RegistryObject<Block> DARK_GREEN_BED = HELPER.createBedBlock(FDyeColors.DARK_GREEN);
-	public static final RegistryObject<Block> FOREST_GREEN_BED = HELPER.createBedBlock(FDyeColors.FOREST_GREEN);
-	public static final RegistryObject<Block> HOT_PINK_BED = HELPER.createBedBlock(FDyeColors.HOT_PINK);
-	public static final RegistryObject<Block> INDIGO_BED = HELPER.createBedBlock(FDyeColors.INDIGO);
-	public static final RegistryObject<Block> MAROON_BED = HELPER.createBedBlock(FDyeColors.MAROON);
-	public static final RegistryObject<Block> NAVY_BED = HELPER.createBedBlock(FDyeColors.NAVY);
-	public static final RegistryObject<Block> OLIVE_BED = HELPER.createBedBlock(FDyeColors.OLIVE);
-	public static final RegistryObject<Block> PALE_GREEN_BED = HELPER.createBedBlock(FDyeColors.PALE_GREEN);
-	public static final RegistryObject<Block> PALE_PINK_BED = HELPER.createBedBlock(FDyeColors.PALE_PINK);
-	public static final RegistryObject<Block> PALE_YELLOW_BED = HELPER.createBedBlock(FDyeColors.PALE_YELLOW);
-	public static final RegistryObject<Block> SKY_BLUE_BED = HELPER.createBedBlock(FDyeColors.SKY_BLUE);
-	public static final RegistryObject<Block> SLATE_GRAY_BED = HELPER.createBedBlock(FDyeColors.SLATE_GRAY);
-	public static final RegistryObject<Block> VIOLET_BED = HELPER.createBedBlock(FDyeColors.VIOLET);
+//	public static final RegistryObject<Block> AMBER_BED = HELPER.createBedBlock(FDyeColors.AMBER);
+//	public static final RegistryObject<Block> BEIGE_BED = HELPER.createBedBlock(FDyeColors.BEIGE);
+//	public static final RegistryObject<Block> CREAM_BED = HELPER.createBedBlock(FDyeColors.CREAM);
+//	public static final RegistryObject<Block> DARK_GREEN_BED = HELPER.createBedBlock(FDyeColors.DARK_GREEN);
+//	public static final RegistryObject<Block> FOREST_GREEN_BED = HELPER.createBedBlock(FDyeColors.FOREST_GREEN);
+//	public static final RegistryObject<Block> HOT_PINK_BED = HELPER.createBedBlock(FDyeColors.HOT_PINK);
+//	public static final RegistryObject<Block> INDIGO_BED = HELPER.createBedBlock(FDyeColors.INDIGO);
+//	public static final RegistryObject<Block> MAROON_BED = HELPER.createBedBlock(FDyeColors.MAROON);
+//	public static final RegistryObject<Block> NAVY_BED = HELPER.createBedBlock(FDyeColors.NAVY);
+//	public static final RegistryObject<Block> OLIVE_BED = HELPER.createBedBlock(FDyeColors.OLIVE);
+//	public static final RegistryObject<Block> PALE_GREEN_BED = HELPER.createBedBlock(FDyeColors.PALE_GREEN);
+//	public static final RegistryObject<Block> PALE_PINK_BED = HELPER.createBedBlock(FDyeColors.PALE_PINK);
+//	public static final RegistryObject<Block> PALE_YELLOW_BED = HELPER.createBedBlock(FDyeColors.PALE_YELLOW);
+//	public static final RegistryObject<Block> SKY_BLUE_BED = HELPER.createBedBlock(FDyeColors.SKY_BLUE);
+//	public static final RegistryObject<Block> SLATE_GRAY_BED = HELPER.createBedBlock(FDyeColors.SLATE_GRAY);
+//	public static final RegistryObject<Block> VIOLET_BED = HELPER.createBedBlock(FDyeColors.VIOLET);
 	
 	public static class Properties {
 		
@@ -200,7 +200,7 @@ public class FlamboyantBlocks {
 		public static final Block[] CONCRETE_POWDER = {AMBER_CONCRETE_POWDER.get(), BEIGE_CONCRETE_POWDER.get(), CREAM_CONCRETE_POWDER.get(), DARK_GREEN_CONCRETE_POWDER.get(), FOREST_GREEN_CONCRETE_POWDER.get(), HOT_PINK_CONCRETE_POWDER.get(), INDIGO_CONCRETE_POWDER.get(), MAROON_CONCRETE_POWDER.get(), NAVY_CONCRETE_POWDER.get(), OLIVE_CONCRETE_POWDER.get(), PALE_GREEN_CONCRETE_POWDER.get(), PALE_PINK_CONCRETE_POWDER.get(), PALE_YELLOW_CONCRETE_POWDER.get(), SKY_BLUE_CONCRETE_POWDER.get(), SLATE_GRAY_CONCRETE_POWDER.get(), VIOLET_CONCRETE_POWDER.get()};
 		public static final Block[] STAINED_GLASS = {AMBER_STAINED_GLASS.get(), BEIGE_STAINED_GLASS.get(), CREAM_STAINED_GLASS.get(), DARK_GREEN_STAINED_GLASS.get(), FOREST_GREEN_STAINED_GLASS.get(), HOT_PINK_STAINED_GLASS.get(), INDIGO_STAINED_GLASS.get(), MAROON_STAINED_GLASS.get(), NAVY_STAINED_GLASS.get(), OLIVE_STAINED_GLASS.get(), PALE_GREEN_STAINED_GLASS.get(), PALE_PINK_STAINED_GLASS.get(), PALE_YELLOW_STAINED_GLASS.get(), SKY_BLUE_STAINED_GLASS.get(), SLATE_GRAY_STAINED_GLASS.get(), VIOLET_STAINED_GLASS.get()};
 		public static final Block[] STAINED_GLASS_PANES = {AMBER_STAINED_GLASS_PANE.get(), BEIGE_STAINED_GLASS_PANE.get(), CREAM_STAINED_GLASS_PANE.get(), DARK_GREEN_STAINED_GLASS_PANE.get(), FOREST_GREEN_STAINED_GLASS_PANE.get(), HOT_PINK_STAINED_GLASS_PANE.get(), INDIGO_STAINED_GLASS_PANE.get(), MAROON_STAINED_GLASS_PANE.get(), NAVY_STAINED_GLASS_PANE.get(), OLIVE_STAINED_GLASS_PANE.get(), PALE_GREEN_STAINED_GLASS_PANE.get(), PALE_PINK_STAINED_GLASS_PANE.get(), PALE_YELLOW_STAINED_GLASS_PANE.get(), SKY_BLUE_STAINED_GLASS_PANE.get(), SLATE_GRAY_STAINED_GLASS_PANE.get(), VIOLET_STAINED_GLASS_PANE.get()};
-		public static final Block[] BEDS = {AMBER_BED.get(), BEIGE_BED.get(), CREAM_BED.get(), DARK_GREEN_BED.get(), FOREST_GREEN_BED.get(), HOT_PINK_BED.get(), INDIGO_BED.get(), MAROON_BED.get(), NAVY_BED.get(), OLIVE_BED.get(), PALE_GREEN_BED.get(), PALE_PINK_BED.get(), PALE_YELLOW_BED.get(), SKY_BLUE_BED.get(), SLATE_GRAY_BED.get(), VIOLET_BED.get()};
+//		public static final Block[] BEDS = {AMBER_BED.get(), BEIGE_BED.get(), CREAM_BED.get(), DARK_GREEN_BED.get(), FOREST_GREEN_BED.get(), HOT_PINK_BED.get(), INDIGO_BED.get(), MAROON_BED.get(), NAVY_BED.get(), OLIVE_BED.get(), PALE_GREEN_BED.get(), PALE_PINK_BED.get(), PALE_YELLOW_BED.get(), SKY_BLUE_BED.get(), SLATE_GRAY_BED.get(), VIOLET_BED.get()};
 		
 	}
 	

@@ -22,15 +22,15 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class Flamboyant {
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "flamboyant";
-    public static final Registrator REGISTRATOR = new Registrator(MOD_ID, true);
+    public static final Registrator REGISTRATOR = new Registrator(MOD_ID);
     public static Flamboyant instance;
 
     IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
     public Flamboyant() {
-    	REGISTRATOR.getHelpers().put(ForgeRegistries.ITEMS, new ItemHelper(REGISTRATOR));
-    	REGISTRATOR.getHelpers().put(ForgeRegistries.BLOCKS, new FBlockHelper(REGISTRATOR));
-    	REGISTRATOR.getHelpers().put(ForgeRegistries.TILE_ENTITIES, new TileEntityHelper(REGISTRATOR));
+//    	REGISTRATOR.getHelpers().put(ForgeRegistries.ITEMS, new ItemHelper(REGISTRATOR));
+//    	REGISTRATOR.getHelpers().put(ForgeRegistries.BLOCKS, new FBlockHelper(REGISTRATOR));
+//    	REGISTRATOR.getHelpers().put(ForgeRegistries.TILE_ENTITIES, new TileEntityHelper(REGISTRATOR));
     	
         modEventBus.addListener(this::doCommonStuff);
         modEventBus.addListener(this::doClientStuff);
