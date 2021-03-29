@@ -5,6 +5,7 @@ import co.eltrut.differentiate.core.registrator.Registrator;
 import co.eltrut.flamboyant.client.renderer.FBedItemRenderer;
 import co.eltrut.flamboyant.common.blocks.FBedBlock;
 import co.eltrut.flamboyant.common.color.FDyeColor;
+import co.eltrut.flamboyant.core.other.FlamboyantAtlas;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -30,6 +31,7 @@ public class FBlockHelper extends BlockHelper {
 		      }).sound(SoundType.WOOD).strength(0.2F).noOcclusion());
 		});
 		this.itemRegister.createItem(name, () -> new BedItem(registeredBlock.get(), new Item.Properties().stacksTo(1).tab(ItemGroup.TAB_DECORATIONS).setISTER(() -> () -> new FBedItemRenderer(color))));
+		FlamboyantAtlas.addBedInfo(color.getTranslationKey());
 		return registeredBlock;
 	}
 

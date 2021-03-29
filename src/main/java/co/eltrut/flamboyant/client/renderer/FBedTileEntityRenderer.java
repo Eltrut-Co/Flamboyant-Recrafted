@@ -5,11 +5,11 @@ import com.mojang.blaze3d.vertex.IVertexBuilder;
 
 import co.eltrut.flamboyant.common.blocks.FBedBlock;
 import co.eltrut.flamboyant.common.tileentities.FBedTileEntity;
+import co.eltrut.flamboyant.core.other.FlamboyantAtlas;
 import co.eltrut.flamboyant.core.registry.FlamboyantTileEntities;
 import it.unimi.dsi.fastutil.ints.Int2IntFunction;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ChestBlock;
-import net.minecraft.client.renderer.Atlases;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.model.ModelRenderer;
@@ -56,7 +56,7 @@ public class FBedTileEntityRenderer extends TileEntityRenderer<FBedTileEntity> {
 	@Override
 	public void render(FBedTileEntity tileEntityIn, float partialTicks, MatrixStack matrixStackIn,
 			IRenderTypeBuffer bufferIn, int combinedLightIn, int combinedOverlayIn) {
-		RenderMaterial rendermaterial = Atlases.BED_TEXTURES[tileEntityIn.getColor().getId()];
+		RenderMaterial rendermaterial = FlamboyantAtlas.get(tileEntityIn.getColor().getSerializedName()).getMaterial();
 		World world = tileEntityIn.getLevel();
 		if (world != null) {
 			BlockState blockstate = tileEntityIn.getBlockState();
