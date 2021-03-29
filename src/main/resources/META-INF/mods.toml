@@ -4,7 +4,7 @@ license="GNU GPL 3.0"
 issueTrackerURL="https://github.com/Eltrut-Co/Flamboyant-Recrafted/issues"
 [[mods]]
 modId="flamboyant"
-version="1.3.1"
+version="1.3.2"
 displayName="Flamboyant Recrafted"
 logoFile="flamboyant.png"
 credits="Eltrut & Co."
