@@ -102,7 +102,7 @@ public class FDyeColor implements IStringSerializable {
 		return this.translationKey;
 	}
 
-	public String getString() {
+	public String getSerializedName() {
 		return this.translationKey;
 	}
 
@@ -120,7 +120,7 @@ public class FDyeColor implements IStringSerializable {
 //	         return ((DyeItem)stack.getItem()).getDyeColor();
 
 		for (FDyeColor color : VALUES) {
-			if (stack.getItem().isIn(color.getTag()))
+			if (stack.getItem().is(color.getTag()))
 				return color;
 		}
 

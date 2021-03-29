@@ -16,9 +16,9 @@ public class FStainedGlassPaneBlock extends PaneBlock implements IBeaconBeamColo
 	
 	public FStainedGlassPaneBlock(AbstractBlock.Properties properties) {
 		super(properties);
-		this.setDefaultState(this.stateContainer.getBaseState().with(NORTH, Boolean.valueOf(false))
-				.with(EAST, Boolean.valueOf(false)).with(SOUTH, Boolean.valueOf(false))
-				.with(WEST, Boolean.valueOf(false)).with(WATERLOGGED, Boolean.valueOf(false)));
+		this.registerDefaultState(this.stateDefinition.any().setValue(NORTH, Boolean.valueOf(false))
+				.setValue(EAST, Boolean.valueOf(false)).setValue(SOUTH, Boolean.valueOf(false))
+				.setValue(WEST, Boolean.valueOf(false)).setValue(WATERLOGGED, Boolean.valueOf(false)));
 	}
 
 	@Override
@@ -27,13 +27,13 @@ public class FStainedGlassPaneBlock extends PaneBlock implements IBeaconBeamColo
 	}
 	
 	@Override
-	public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+	public void fillItemCategory(ItemGroup group, NonNullList<ItemStack> items) {
 		GroupUtil.fillItem(this.asItem(), Items.BLACK_STAINED_GLASS_PANE, group, items);
 	}
 
 	@Override
 	public RenderType getRenderType() {
-		return RenderType.getTranslucent();
+		return RenderType.translucent();
 	}
 	
 }

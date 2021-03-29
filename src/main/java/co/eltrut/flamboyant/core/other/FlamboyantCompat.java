@@ -7,7 +7,7 @@ import net.minecraftforge.fml.client.registry.ClientRegistry;
 public class FlamboyantCompat {
 	
 	public static void registerEntityRenderers() {
-//		ClientRegistry.bindTileEntityRenderer(FlamboyantTileEntities.BED.get(), FBedTileEntityRenderer::new);
+		ClientRegistry.bindTileEntityRenderer(FlamboyantTileEntities.BED.get(), FBedTileEntityRenderer::new);
 	}
 	
 }

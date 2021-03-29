@@ -19,7 +19,7 @@ public class FBedItemRenderer extends ItemStackTileEntityRenderer {
 	}
 	
 	@Override
-	public void func_239207_a_(ItemStack itemStackIn, TransformType transformType, MatrixStack matrixStack, IRenderTypeBuffer buffer, int combinedLight, int combinedOverlay) {
+	public void renderByItem(ItemStack itemStackIn, TransformType transformType, MatrixStack matrixStack, IRenderTypeBuffer buffer, int combinedLight, int combinedOverlay) {
 		TileEntityRendererDispatcher.instance.renderItem(new FBedTileEntity(color), matrixStack, buffer, combinedLight, combinedOverlay);
 	}
 

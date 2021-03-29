@@ -11,6 +11,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.NonNullList;
 
+import net.minecraft.block.AbstractBlock.Properties;
+
 public class FStainedGlassBlock extends AbstractGlassBlock implements IBeaconBeamColorProvider, IRenderTypeBlock {
 	
 	public FStainedGlassBlock(Properties properties) {
@@ -23,13 +25,13 @@ public class FStainedGlassBlock extends AbstractGlassBlock implements IBeaconBea
 	}
 	
 	@Override
-	public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+	public void fillItemCategory(ItemGroup group, NonNullList<ItemStack> items) {
 		GroupUtil.fillItem(this.asItem(), Items.BLACK_STAINED_GLASS, group, items);
 	}
 
 	@Override
 	public RenderType getRenderType() {
-		return RenderType.getTranslucent();
+		return RenderType.translucent();
 	}
 
 }

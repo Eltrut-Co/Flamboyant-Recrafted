@@ -11,8 +11,7 @@ public class FBedTileEntity extends TileEntity /*implements IRendererTileEntity<
 	private FDyeColor color;
 
 	public FBedTileEntity() {
-		super(null);
-//		super(FlamboyantTileEntities.BED.get());
+		super(FlamboyantTileEntities.BED.get());
 	}
 
 	public FBedTileEntity(FDyeColor colorIn) {
@@ -22,7 +21,7 @@ public class FBedTileEntity extends TileEntity /*implements IRendererTileEntity<
 
 	@Override
 	public SUpdateTileEntityPacket getUpdatePacket() {
-		return new SUpdateTileEntityPacket(this.pos, 11, this.getUpdateTag());
+		return new SUpdateTileEntityPacket(this.worldPosition, 11, this.getUpdateTag());
 	}
 
 	public FDyeColor getColor() {

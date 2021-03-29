@@ -25,11 +25,11 @@ public class FBlockHelper extends BlockHelper {
 	public RegistryObject<Block> createBedBlock(FDyeColor color) {
 		String name = color.getTranslationKey() + "_bed";
 		RegistryObject<Block> registeredBlock = this.registry.register(name, () -> {
-			return new FBedBlock(color, AbstractBlock.Properties.create(Material.WOOL, (state) -> {
-		         return state.get(FBedBlock.PART) == BedPart.FOOT ? color.getMapColor() : MaterialColor.WOOL;
-		      }).sound(SoundType.WOOD).hardnessAndResistance(0.2F).notSolid());
+			return new FBedBlock(color, AbstractBlock.Properties.of(Material.WOOL, (state) -> {
+		         return state.getValue(FBedBlock.PART) == BedPart.FOOT ? color.getMapColor() : MaterialColor.WOOL;
+		      }).sound(SoundType.WOOD).strength(0.2F).noOcclusion());
 		});
-		this.itemRegister.createItem(name, () -> new BedItem(registeredBlock.get(), new Item.Properties().maxStackSize(1).group(ItemGroup.DECORATIONS).setISTER(() -> () -> new FBedItemRenderer(color))));
+		this.itemRegister.createItem(name, () -> new BedItem(registeredBlock.get(), new Item.Properties().stacksTo(1).tab(ItemGroup.TAB_DECORATIONS).setISTER(() -> () -> new FBedItemRenderer(color))));
 		return registeredBlock;
 	}
 

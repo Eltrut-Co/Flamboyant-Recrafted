@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.NonNullList;
 
+import net.minecraft.block.AbstractBlock.Properties;
+
 public class FConcretePowderBlock extends ConcretePowderBlock {
 	
 	public FConcretePowderBlock(Block solidified, Properties properties) {
@@ -15,7 +17,7 @@ public class FConcretePowderBlock extends ConcretePowderBlock {
 	}
 
 	@Override
-	public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+	public void fillItemCategory(ItemGroup group, NonNullList<ItemStack> items) {
 		GroupUtil.fillItem(this.asItem(), Items.BLACK_CONCRETE_POWDER, group, items);
 	}
 	
