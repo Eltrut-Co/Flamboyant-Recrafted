@@ -13,9 +13,9 @@ public class FDyeItem extends Item {
 		super(properties);
 	}
 	
-	@Override
-	public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
-		GroupUtil.fillItem(this, Items.BLACK_DYE, group, items);
-	}
+//	@Override
+//	public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+//		GroupUtil.fillItem(this, Items.BLACK_DYE, group, items);
+//	}
 
 }
