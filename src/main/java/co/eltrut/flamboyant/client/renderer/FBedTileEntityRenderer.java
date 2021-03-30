@@ -9,7 +9,6 @@ import co.eltrut.flamboyant.core.other.FlamboyantAtlas;
 import co.eltrut.flamboyant.core.registry.FlamboyantTileEntities;
 import it.unimi.dsi.fastutil.ints.Int2IntFunction;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.ChestBlock;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.model.ModelRenderer;
@@ -56,13 +55,13 @@ public class FBedTileEntityRenderer extends TileEntityRenderer<FBedTileEntity> {
 	@Override
 	public void render(FBedTileEntity tileEntityIn, float partialTicks, MatrixStack matrixStackIn,
 			IRenderTypeBuffer bufferIn, int combinedLightIn, int combinedOverlayIn) {
-		RenderMaterial rendermaterial = FlamboyantAtlas.get(tileEntityIn.getColor().getSerializedName()).getMaterial();
+		RenderMaterial rendermaterial = FlamboyantAtlas.get(tileEntityIn.getColor().getTranslationKey()).getMaterial();
 		World world = tileEntityIn.getLevel();
 		if (world != null) {
 			BlockState blockstate = tileEntityIn.getBlockState();
 			TileEntityMerger.ICallbackWrapper<? extends FBedTileEntity> icallbackwrapper = TileEntityMerger
 					.combineWithNeigbour(FlamboyantTileEntities.BED.get(), FBedBlock::getMergeType, FBedBlock::getFootDirection,
-							ChestBlock.FACING, blockstate, world, tileEntityIn.getBlockPos(), (p_228846_0_, p_228846_1_) -> {
+							FBedBlock.FACING, blockstate, world, tileEntityIn.getBlockPos(), (p_228846_0_, p_228846_1_) -> {
 								return false;
 							});
 			int i = icallbackwrapper.<Int2IntFunction>apply(new DualBrightnessCallback<>()).get(combinedLightIn);
