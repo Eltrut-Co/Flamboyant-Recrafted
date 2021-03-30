@@ -1,6 +1,21 @@
 {
   "replace": false,
   "values": [
-    
+    "flamboyant:amber_bed",
+    "flamboyant:beige_bed",
+    "flamboyant:cream_bed",
+    "flamboyant:dark_green_bed",
+    "flamboyant:forest_green_bed",
+    "flamboyant:hot_pink_bed",
+    "flamboyant:indigo_bed",
+    "flamboyant:maroon_bed",
+    "flamboyant:navy_bed",
+    "flamboyant:olive_bed",
+    "flamboyant:pale_green_bed",
+    "flamboyant:pale_pink_bed",
+    "flamboyant:pale_yellow_bed",
+    "flamboyant:sky_blue_bed",
+    "flamboyant:slate_gray_bed",
+    "flamboyant:violet_bed"
   ]
 }

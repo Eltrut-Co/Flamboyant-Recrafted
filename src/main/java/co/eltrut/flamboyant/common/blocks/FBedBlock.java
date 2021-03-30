@@ -389,4 +389,9 @@ public class FBedBlock extends HorizontalBlock {
 		return FlamboyantTileEntities.BED.get().create();
 	}
 	
+	@Override
+	public boolean isBed(BlockState state, IBlockReader block, BlockPos pos, Entity entity) {
+		return true;
+	}
+	
 }
