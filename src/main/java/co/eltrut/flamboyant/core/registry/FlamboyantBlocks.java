@@ -6,6 +6,7 @@ import co.eltrut.differentiate.common.block.FollowBlock;
 import co.eltrut.differentiate.core.util.CompatUtil.Mods;
 import co.eltrut.flamboyant.common.blocks.FCarpetBlock;
 import co.eltrut.flamboyant.common.blocks.FGlazedTerracottaBlock;
+import co.eltrut.flamboyant.common.blocks.FQuiltedWoolBlock;
 import co.eltrut.flamboyant.common.blocks.FStainedGlassBlock;
 import co.eltrut.flamboyant.common.blocks.FStainedGlassPaneBlock;
 import co.eltrut.flamboyant.common.blocks.FWoolBlock;
@@ -37,7 +38,7 @@ public class FlamboyantBlocks {
 	public static final List<RegistryObject<Block>> STAINED_GLASS_PANES = HELPER.createSimpleDyeBlocks("_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.TAB_DECORATIONS);
 	public static final List<RegistryObject<Block>> BEDS = HELPER.createBedBlocks();
 	
-	public static final List<RegistryObject<Block>> QUILTED_WOOLS = HELPER.createSimpleFuelDyeBlocks("_quilted_wool", () -> new FWoolBlock(Properties.WOOL), ItemGroup.TAB_BUILDING_BLOCKS, 100, Mods.QUARK);
+	public static final List<RegistryObject<Block>> QUILTED_WOOLS = HELPER.createSimpleFuelDyeBlocks("_quilted_wool", () -> new FQuiltedWoolBlock(Properties.WOOL), ItemGroup.TAB_BUILDING_BLOCKS, 100, Mods.QUARK);
 	
 	public static class Properties {
 		
