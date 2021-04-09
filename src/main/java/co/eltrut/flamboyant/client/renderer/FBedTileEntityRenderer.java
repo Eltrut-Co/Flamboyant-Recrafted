@@ -8,6 +8,7 @@ import co.eltrut.flamboyant.common.tileentities.FBedTileEntity;
 import co.eltrut.flamboyant.core.other.FlamboyantAtlas;
 import co.eltrut.flamboyant.core.registry.FlamboyantTileEntities;
 import it.unimi.dsi.fastutil.ints.Int2IntFunction;
+import net.minecraft.block.BedBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.RenderType;
@@ -60,7 +61,7 @@ public class FBedTileEntityRenderer extends TileEntityRenderer<FBedTileEntity> {
 		if (world != null) {
 			BlockState blockstate = tileEntityIn.getBlockState();
 			TileEntityMerger.ICallbackWrapper<? extends FBedTileEntity> icallbackwrapper = TileEntityMerger
-					.combineWithNeigbour(FlamboyantTileEntities.BED.get(), FBedBlock::getMergeType, FBedBlock::getFootDirection,
+					.combineWithNeigbour(FlamboyantTileEntities.BED.get(), BedBlock::getBlockType, BedBlock::getConnectedDirection,
 							FBedBlock.FACING, blockstate, world, tileEntityIn.getBlockPos(), (p_228846_0_, p_228846_1_) -> {
 								return false;
 							});

@@ -26,7 +26,7 @@ public class FBedTileEntity extends TileEntity /*implements IRendererTileEntity<
 
 	public FDyeColor getColor() {
 		if (this.color == null) {
-			this.color = ((FBedBlock)this.getBlockState().getBlock()).getColor();
+			this.color = ((FBedBlock)this.getBlockState().getBlock()).getFColor();
 		}
 
 		return this.color;
