@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "WWW",
+    " S "
+  ],
+  "key": {
+    "W": {
+      "item": "flamboyant:sky_blue_wool"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "flamboyant:sky_blue_quilted_wool",
+    "count": 3
+  },
+  "conditions": [
+    {
+      "type": "differentiate:flag",
+      "flag": "quilted_wool"
+    }
+  ]
+}
