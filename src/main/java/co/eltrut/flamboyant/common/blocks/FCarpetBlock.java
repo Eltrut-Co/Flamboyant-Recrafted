@@ -1,5 +1,6 @@
 package co.eltrut.flamboyant.common.blocks;
 
+import co.eltrut.differentiate.common.interf.IFlammableBlock;
 import co.eltrut.differentiate.core.util.GroupUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -16,7 +17,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 
-public class FCarpetBlock extends Block {
+public class FCarpetBlock extends Block implements IFlammableBlock {
 	protected static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
 
 	public FCarpetBlock(Properties properties) {
@@ -41,6 +42,16 @@ public class FCarpetBlock extends Block {
 	@Override
 	public void fillItemCategory(ItemGroup group, NonNullList<ItemStack> items) {
 		GroupUtil.fillItem(this.asItem(), Items.BLACK_CARPET, group, items);
+	}
+
+	@Override
+	public int getEncouragement() {
+		return 60;
+	}
+
+	@Override
+	public int getFlammability() {
+		return 20;
 	}
 	
 }

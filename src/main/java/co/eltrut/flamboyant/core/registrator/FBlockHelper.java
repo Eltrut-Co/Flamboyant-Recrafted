@@ -54,6 +54,12 @@ public class FBlockHelper extends BlockHelper {
 		});
 	}
 	
+	public List<RegistryObject<Block>> createSimpleFuelDyeBlocks(String name, Supplier<Block> block, ItemGroup group, int burnTime, String... mods) {
+		return this.createDyeBlocks(s -> {
+			return this.createSimpleFuelBlock(s.getSerializedName() + name, block, group, burnTime, mods);
+		});
+	}
+	
 	public List<RegistryObject<Block>> createConcretePowderBlocks(List<RegistryObject<Block>> concreteBlocks) {
 		return this.createDyeBlocks(s -> {
 			return this.createSimpleBlock(s.getSerializedName() + "_concrete_powder", () -> new FConcretePowderBlock(concreteBlocks.get(s.getId()).get(), FlamboyantBlocks.Properties.CONCRETE_POWDER), ItemGroup.TAB_BUILDING_BLOCKS);

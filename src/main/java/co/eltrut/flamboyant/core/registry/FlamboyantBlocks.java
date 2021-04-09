@@ -3,10 +3,12 @@ package co.eltrut.flamboyant.core.registry;
 import java.util.List;
 
 import co.eltrut.differentiate.common.block.FollowBlock;
+import co.eltrut.differentiate.core.util.CompatUtil.Mods;
 import co.eltrut.flamboyant.common.blocks.FCarpetBlock;
 import co.eltrut.flamboyant.common.blocks.FGlazedTerracottaBlock;
 import co.eltrut.flamboyant.common.blocks.FStainedGlassBlock;
 import co.eltrut.flamboyant.common.blocks.FStainedGlassPaneBlock;
+import co.eltrut.flamboyant.common.blocks.FWoolBlock;
 import co.eltrut.flamboyant.core.Flamboyant;
 import co.eltrut.flamboyant.core.registrator.FBlockHelper;
 import net.minecraft.block.AbstractBlock;
@@ -25,8 +27,8 @@ public class FlamboyantBlocks {
 	
 	public static final FBlockHelper HELPER = Flamboyant.REGISTRATOR.getHelper(ForgeRegistries.BLOCKS);
 	
-	public static final List<RegistryObject<Block>> WOOLS = HELPER.createSimpleDyeBlocks("_wool", () -> new FollowBlock(Properties.WOOL, Items.BLACK_WOOL), ItemGroup.TAB_BUILDING_BLOCKS);
-	public static final List<RegistryObject<Block>> CARPETS = HELPER.createSimpleDyeBlocks("_carpet", () -> new FCarpetBlock(Properties.CARPET), ItemGroup.TAB_DECORATIONS);
+	public static final List<RegistryObject<Block>> WOOLS = HELPER.createSimpleFuelDyeBlocks("_wool", () -> new FWoolBlock(Properties.WOOL), ItemGroup.TAB_BUILDING_BLOCKS, 100);
+	public static final List<RegistryObject<Block>> CARPETS = HELPER.createSimpleFuelDyeBlocks("_carpet", () -> new FCarpetBlock(Properties.CARPET), ItemGroup.TAB_DECORATIONS, 67);
 	public static final List<RegistryObject<Block>> TERRACOTTAS = HELPER.createSimpleDyeBlocks("_terracotta", () -> new FollowBlock(Properties.TERRACOTTA, Items.BLACK_TERRACOTTA), ItemGroup.TAB_BUILDING_BLOCKS);
 	public static final List<RegistryObject<Block>> GLAZED_TERRACOTTAS = HELPER.createSimpleDyeBlocks("_glazed_terracotta", () -> new FGlazedTerracottaBlock(Properties.GLAZED_TERRACOTTA), ItemGroup.TAB_DECORATIONS);
 	public static final List<RegistryObject<Block>> CONCRETES = HELPER.createSimpleDyeBlocks("_concrete", () -> new FollowBlock(Properties.CONCRETE, Items.BLACK_CONCRETE), ItemGroup.TAB_BUILDING_BLOCKS);
@@ -34,6 +36,8 @@ public class FlamboyantBlocks {
 	public static final List<RegistryObject<Block>> STAINED_GLASS = HELPER.createSimpleDyeBlocks("_stained_glass", () -> new FStainedGlassBlock(Properties.STAINED_GLASS), ItemGroup.TAB_BUILDING_BLOCKS);
 	public static final List<RegistryObject<Block>> STAINED_GLASS_PANES = HELPER.createSimpleDyeBlocks("_stained_glass_pane", () -> new FStainedGlassPaneBlock(Properties.STAINED_GLASS), ItemGroup.TAB_DECORATIONS);
 	public static final List<RegistryObject<Block>> BEDS = HELPER.createBedBlocks();
+	
+	public static final List<RegistryObject<Block>> QUILTED_WOOLS = HELPER.createSimpleFuelDyeBlocks("_quilted_wool", () -> new FWoolBlock(Properties.WOOL), ItemGroup.TAB_BUILDING_BLOCKS, 100, Mods.QUARK);
 	
 	public static class Properties {
 		
