@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wool",
+  "ingredients": [
+    {
+      "item": "flamboyant:sky_blue_dye"
+    },
+    {
+      "tag": "minecraft:wool"
+    }
+  ],
+  "result": {
+    "item": "flamboyant:sky_blue_wool"
+  },
+  "conditions": [
+    {
+      "type": "differentiate:flag",
+      "flag": "dye_any_wool"
+    }
+  ]
+}

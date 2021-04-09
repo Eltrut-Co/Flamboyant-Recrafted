@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wool",
+  "ingredients": [
+    {
+      "item": "flamboyant:hot_pink_dye"
+    },
+    {
+      "tag": "minecraft:wool"
+    }
+  ],
+  "result": {
+    "item": "flamboyant:hot_pink_wool"
+  },
+  "conditions": [
+    {
+      "type": "differentiate:flag",
+      "flag": "dye_any_wool"
+    }
+  ]
+}

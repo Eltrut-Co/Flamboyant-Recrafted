@@ -11,5 +11,14 @@
   ],
   "result": {
     "item": "flamboyant:maroon_wool"
-  }
+  },
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "differentiate:flag",
+        "flag": "dye_any_wool"
+      }
+    }
+  ]
 }
