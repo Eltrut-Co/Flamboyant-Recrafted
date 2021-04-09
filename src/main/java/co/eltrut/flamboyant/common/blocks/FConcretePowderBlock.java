@@ -8,8 +8,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.NonNullList;
 
-import net.minecraft.block.AbstractBlock.Properties;
-
 public class FConcretePowderBlock extends ConcretePowderBlock {
 	
 	public FConcretePowderBlock(Block solidified, Properties properties) {

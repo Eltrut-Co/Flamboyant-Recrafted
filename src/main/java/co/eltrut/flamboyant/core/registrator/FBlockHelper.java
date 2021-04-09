@@ -1,11 +1,20 @@
 package co.eltrut.flamboyant.core.registrator;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+
 import co.eltrut.differentiate.core.registrator.BlockHelper;
 import co.eltrut.differentiate.core.registrator.Registrator;
 import co.eltrut.flamboyant.client.renderer.FBedItemRenderer;
 import co.eltrut.flamboyant.common.blocks.FBedBlock;
+import co.eltrut.flamboyant.common.blocks.FConcretePowderBlock;
 import co.eltrut.flamboyant.common.color.FDyeColor;
+import co.eltrut.flamboyant.common.color.FDyeColors;
 import co.eltrut.flamboyant.core.other.FlamboyantAtlas;
+import co.eltrut.flamboyant.core.registry.FlamboyantBlocks;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -33,6 +42,28 @@ public class FBlockHelper extends BlockHelper {
 		this.itemRegister.createItem(name, () -> new BedItem(registeredBlock.get(), new Item.Properties().stacksTo(1).tab(ItemGroup.TAB_DECORATIONS).setISTER(() -> () -> new FBedItemRenderer(color))));
 		FlamboyantAtlas.addBedInfo(color.getTranslationKey());
 		return registeredBlock;
+	}
+	
+	public List<RegistryObject<Block>> createDyeBlocks(Function<? super FDyeColor, ? extends RegistryObject<Block>> mapper) {
+		return Arrays.stream(FDyeColors.COLORS).map(mapper).collect(Collectors.toList());
+	}
+	
+	public List<RegistryObject<Block>> createSimpleDyeBlocks(String name, Supplier<Block> block, ItemGroup group, String... mods) {
+		return this.createDyeBlocks(s -> {
+			return this.createSimpleBlock(s.getSerializedName() + name, block, group, mods);
+		});
+	}
+	
+	public List<RegistryObject<Block>> createConcretePowderBlocks(List<RegistryObject<Block>> concreteBlocks) {
+		return this.createDyeBlocks(s -> {
+			return this.createSimpleBlock(s.getSerializedName() + "_concrete_powder", () -> new FConcretePowderBlock(concreteBlocks.get(s.getId()).get(), FlamboyantBlocks.Properties.CONCRETE_POWDER), ItemGroup.TAB_BUILDING_BLOCKS);
+		});
+	}
+	
+	public List<RegistryObject<Block>> createBedBlocks() {
+		return this.createDyeBlocks(s -> {
+			return this.createBedBlock(s);
+		});
 	}
 
 }

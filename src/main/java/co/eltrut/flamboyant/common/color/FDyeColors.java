@@ -22,4 +22,6 @@ public class FDyeColors {
 	public static final FDyeColor SLATE_GRAY = new FDyeColor(14, "slate_gray", 11546150, MaterialColor.COLOR_RED, 11743532, 16711680);
 	public static final FDyeColor VIOLET = new FDyeColor(15, "violet", 1908001, MaterialColor.COLOR_BLACK, 1973019, 0);
 
+	public static final FDyeColor[] COLORS = {AMBER, BEIGE, CREAM, DARK_GREEN, FOREST_GREEN, HOT_PINK, INDIGO, MAROON, NAVY, OLIVE, PALE_GREEN, PALE_PINK, PALE_YELLOW, SKY_BLUE, SLATE_GRAY, VIOLET};
+	
 }
