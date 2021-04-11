@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "flamboyant:indigo_concrete_powder"
+  },
+  "result": "flamboyant:indigo_stained_glass",
+  "experience": 0.1,
+  "cookingtime": 200
+}
