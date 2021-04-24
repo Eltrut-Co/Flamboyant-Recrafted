@@ -13,9 +13,11 @@ import net.minecraft.state.properties.BedPart;
 import net.minecraft.village.PointOfInterestType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -33,6 +35,7 @@ public class Flamboyant {
     IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
     public Flamboyant() {
+    	ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, FlamboyantConfig.COMMON_SPEC);
     	
         modEventBus.addListener(this::doCommonStuff);
         modEventBus.addListener(this::doClientStuff);

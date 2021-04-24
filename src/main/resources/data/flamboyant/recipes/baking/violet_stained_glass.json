@@ -10,6 +10,10 @@
     {
       "type": "forge:mod_loaded",
       "modid": "environmental"
+    },
+	{
+      "type": "differentiate:condition",
+      "condition": "smeltable_concrete_powder"
     }
   ]
 }
