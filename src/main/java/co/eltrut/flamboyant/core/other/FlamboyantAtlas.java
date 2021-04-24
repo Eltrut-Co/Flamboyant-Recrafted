@@ -10,6 +10,8 @@ import co.eltrut.flamboyant.core.Flamboyant;
 import net.minecraft.client.renderer.Atlases;
 import net.minecraft.client.renderer.model.RenderMaterial;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -29,6 +31,7 @@ public class FlamboyantAtlas {
 		return BED_INFO_MAP.get(key);
 	}
 	
+	@OnlyIn(Dist.CLIENT)
 	@SubscribeEvent
 	public static void onStitch(TextureStitchEvent.Pre event) {
 		if (event.getMap().location().equals(Atlases.BED_SHEET)) {
@@ -41,6 +44,7 @@ public class FlamboyantAtlas {
 	public static class BedInfo {
 		
 		private final ResourceLocation loc;
+		@OnlyIn(Dist.CLIENT)
 		private RenderMaterial material;
 		
 		public BedInfo(String color) {
@@ -48,12 +52,14 @@ public class FlamboyantAtlas {
 			LOGGER.info("Registered info for " + color + " bed");
 		}
 		
+		@OnlyIn(Dist.CLIENT)
 		public void setup(TextureStitchEvent.Pre event) {
 			event.addSprite(loc);
 			this.material = new RenderMaterial(Atlases.BED_SHEET, this.loc);
 			LOGGER.info("Materialized render for " + this.loc);
 		}
 		
+		@OnlyIn(Dist.CLIENT)
 		public RenderMaterial getMaterial() {
 			return this.material;
 		}

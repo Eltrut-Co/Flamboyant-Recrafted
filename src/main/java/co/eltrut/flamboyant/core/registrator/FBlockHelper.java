@@ -2,6 +2,7 @@ package co.eltrut.flamboyant.core.registrator;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.Callable;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -20,10 +21,13 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
+import net.minecraft.client.renderer.tileentity.ItemStackTileEntityRenderer;
 import net.minecraft.item.BedItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.state.properties.BedPart;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.RegistryObject;
 
 public class FBlockHelper extends BlockHelper {
@@ -39,7 +43,7 @@ public class FBlockHelper extends BlockHelper {
 		         return state.getValue(FBedBlock.PART) == BedPart.FOOT ? color.getMapColor() : MaterialColor.WOOL;
 		      }).sound(SoundType.WOOD).strength(0.2F).noOcclusion());
 		});
-		this.itemRegister.createItem(name, () -> new BedItem(registeredBlock.get(), new Item.Properties().stacksTo(1).tab(ItemGroup.TAB_DECORATIONS).setISTER(() -> () -> new FBedItemRenderer(color))));
+		this.itemRegister.createItem(name, () -> new BedItem(registeredBlock.get(), new Item.Properties().stacksTo(1).tab(ItemGroup.TAB_DECORATIONS).setISTER(() -> bedISTER(color))));
 		FlamboyantAtlas.addBedInfo(color.getTranslationKey());
 		return registeredBlock;
 	}
@@ -70,6 +74,11 @@ public class FBlockHelper extends BlockHelper {
 		return this.createDyeBlocks(s -> {
 			return this.createBedBlock(s);
 		});
+	}
+	
+	@OnlyIn(Dist.CLIENT)
+	private static Callable<ItemStackTileEntityRenderer> bedISTER(FDyeColor color) {
+		return () -> new FBedItemRenderer(color);
 	}
 
 }
