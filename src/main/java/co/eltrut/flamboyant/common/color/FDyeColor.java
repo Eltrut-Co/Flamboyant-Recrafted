@@ -98,10 +98,12 @@ public class FDyeColor implements IStringSerializable {
 //	      return BY_FIREWORK_COLOR.get(fireworkColorIn);
 //	   }
 
+	@Override
 	public String toString() {
 		return this.translationKey;
 	}
 
+	@Override
 	public String getSerializedName() {
 		return this.translationKey;
 	}
