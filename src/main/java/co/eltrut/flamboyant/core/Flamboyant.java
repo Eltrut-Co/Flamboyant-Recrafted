@@ -66,6 +66,6 @@ public class Flamboyant {
     	}).forEach(s -> {
     		map.put(s, PointOfInterestType.HOME);
     		PointOfInterestType.HOME.matchingStates.add(s);
-    	});;
+    	});
     }
 }
