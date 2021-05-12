@@ -71,9 +71,7 @@ public class FBlockHelper extends BlockHelper {
 	}
 	
 	public List<RegistryObject<Block>> createBedBlocks() {
-		return this.createDyeBlocks(s -> {
-			return this.createBedBlock(s);
-		});
+		return this.createDyeBlocks(this::createBedBlock);
 	}
 	
 	@OnlyIn(Dist.CLIENT)
