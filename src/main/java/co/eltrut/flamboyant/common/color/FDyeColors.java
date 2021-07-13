@@ -21,7 +21,11 @@ public class FDyeColors {
 	public static final FDyeColor SKY_BLUE = new FDyeColor(13, "sky_blue", 6192150, MaterialColor.COLOR_GREEN, 3887386, 65280);
 	public static final FDyeColor SLATE_GRAY = new FDyeColor(14, "slate_gray", 11546150, MaterialColor.COLOR_RED, 11743532, 16711680);
 	public static final FDyeColor VIOLET = new FDyeColor(15, "violet", 1908001, MaterialColor.COLOR_BLACK, 1973019, 0);
-
-	public static final FDyeColor[] COLORS = {AMBER, BEIGE, CREAM, DARK_GREEN, FOREST_GREEN, HOT_PINK, INDIGO, MAROON, NAVY, OLIVE, PALE_GREEN, PALE_PINK, PALE_YELLOW, SKY_BLUE, SLATE_GRAY, VIOLET};
+	public static final FDyeColor AQUAMARINE = new FDyeColor(16, "aquamarine", 0, MaterialColor.COLOR_BLUE, 0, 0);
+	public static final FDyeColor CHARTREUSE = new FDyeColor(17, "chartreuse", 0, MaterialColor.COLOR_RED, 0, 0);
+	public static final FDyeColor VERMILION = new FDyeColor(18, "vermilion", 0, MaterialColor.COLOR_GREEN, 0, 0);
+	public static final FDyeColor AMARANTH = new FDyeColor(19, "amaranth", 0, MaterialColor.COLOR_RED, 0, 0);
+	
+	public static final FDyeColor[] COLORS = {AMBER, BEIGE, CREAM, DARK_GREEN, FOREST_GREEN, HOT_PINK, INDIGO, MAROON, NAVY, OLIVE, PALE_GREEN, PALE_PINK, PALE_YELLOW, SKY_BLUE, SLATE_GRAY, VIOLET, AQUAMARINE, CHARTREUSE, VERMILION, AMARANTH};
 	
 }
