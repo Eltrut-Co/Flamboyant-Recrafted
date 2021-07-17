@@ -15,6 +15,10 @@
   "item.flamboyant.sky_blue_dye": "Sky Blue Dye",
   "item.flamboyant.slate_gray_dye": "Slate Gray Dye",
   "item.flamboyant.violet_dye": "Violet Dye",
+  "item.flamboyant.aquamarine_dye": "Aquamarine Dye",
+  "item.flamboyant.chartreuse_dye": "Chartreuse Dye",
+  "item.flamboyant.vermilion_dye": "Vermilion Dye",
+  "item.flamboyant.amaranth_dye": "Amaranth Dye",
   
   "block.flamboyant.amber_wool": "Amber Wool",
   "block.flamboyant.beige_wool": "Beige Wool",
@@ -32,6 +36,10 @@
   "block.flamboyant.sky_blue_wool": "Sky Blue Wool",
   "block.flamboyant.slate_gray_wool": "Slate Gray Wool",
   "block.flamboyant.violet_wool": "Violet Wool",
+  "block.flamboyant.aquamarine_wool": "Aquamarine Wool",
+  "block.flamboyant.chartreuse_wool": "Chartreuse Wool",
+  "block.flamboyant.vermilion_wool": "Vermilion Wool",
+  "block.flamboyant.amaranth_wool": "Amaranth Wool",
   
   "block.flamboyant.amber_carpet": "Amber Carpet",
   "block.flamboyant.beige_carpet": "Beige Carpet",
@@ -49,6 +57,10 @@
   "block.flamboyant.sky_blue_carpet": "Sky Blue Carpet",
   "block.flamboyant.slate_gray_carpet": "Slate Gray Carpet",
   "block.flamboyant.violet_carpet": "Violet Carpet",
+  "block.flamboyant.aquamarine_carpet": "Aquamarine Carpet",
+  "block.flamboyant.chartreuse_carpet": "Chartreuse Carpet",
+  "block.flamboyant.vermilion_carpet": "Vermilion Carpet",
+  "block.flamboyant.amaranth_carpet": "Amaranth Carpet",
   
   "block.flamboyant.amber_terracotta": "Amber Terracotta",
   "block.flamboyant.beige_terracotta": "Beige Terracotta",
@@ -66,6 +78,10 @@
   "block.flamboyant.sky_blue_terracotta": "Sky Blue Terracotta",
   "block.flamboyant.slate_gray_terracotta": "Slate Gray Terracotta",
   "block.flamboyant.violet_terracotta": "Violet Terracotta",
+  "block.flamboyant.aquamarine_terracotta": "Aquamarine Terracotta",
+  "block.flamboyant.chartreuse_terracotta": "Chartreuse Terracotta",
+  "block.flamboyant.vermilion_terracotta": "Vermilion Terracotta",
+  "block.flamboyant.amaranth_terracotta": "Amaranth Terracotta",
   
   "block.flamboyant.amber_glazed_terracotta": "Amber Glazed Terracotta",
   "block.flamboyant.beige_glazed_terracotta": "Beige Glazed Terracotta",
@@ -83,6 +99,10 @@
   "block.flamboyant.sky_blue_glazed_terracotta": "Sky Blue Glazed Terracotta",
   "block.flamboyant.slate_gray_glazed_terracotta": "Slate Gray Glazed Terracotta",
   "block.flamboyant.violet_glazed_terracotta": "Violet Glazed Terracotta",
+  "block.flamboyant.aquamarine_glazed_terracotta": "Aquamarine Glazed Terracotta",
+  "block.flamboyant.chartreuse_glazed_terracotta": "Chartreuse Glazed Terracotta",
+  "block.flamboyant.vermilion_glazed_terracotta": "Vermilion Glazed Terracotta",
+  "block.flamboyant.amaranth_glazed_terracotta": "Amaranth Glazed Terracotta",
   
   "block.flamboyant.amber_concrete": "Amber Concrete",
   "block.flamboyant.beige_concrete": "Beige Concrete",
@@ -100,6 +120,10 @@
   "block.flamboyant.sky_blue_concrete": "Sky Blue Concrete",
   "block.flamboyant.slate_gray_concrete": "Slate Gray Concrete",
   "block.flamboyant.violet_concrete": "Violet Concrete",
+  "block.flamboyant.aquamarine_concrete": "Aquamarine Concrete",
+  "block.flamboyant.chartreuse_concrete": "Chartreuse Concrete",
+  "block.flamboyant.vermilion_concrete": "Vermilion Concrete",
+  "block.flamboyant.amaranth_concrete": "Amaranth Concrete",
   
   "block.flamboyant.amber_concrete_powder": "Amber Concrete Powder",
   "block.flamboyant.beige_concrete_powder": "Beige Concrete Powder",
@@ -117,6 +141,10 @@
   "block.flamboyant.sky_blue_concrete_powder": "Sky Blue Concrete Powder",
   "block.flamboyant.slate_gray_concrete_powder": "Slate Gray Concrete Powder",
   "block.flamboyant.violet_concrete_powder": "Violet Concrete Powder",
+  "block.flamboyant.aquamarine_concrete_powder": "Aquamarine Concrete Powder",
+  "block.flamboyant.chartreuse_concrete_powder": "Chartreuse Concrete Powder",
+  "block.flamboyant.vermilion_concrete_powder": "Vermilion Concrete Powder",
+  "block.flamboyant.amaranth_concrete_powder": "Amaranth Concrete Powder",
   
   "block.flamboyant.amber_stained_glass": "Amber Stained Glass",
   "block.flamboyant.beige_stained_glass": "Beige Stained Glass",
@@ -134,6 +162,10 @@
   "block.flamboyant.sky_blue_stained_glass": "Sky Blue Stained Glass",
   "block.flamboyant.slate_gray_stained_glass": "Slate Gray Stained Glass",
   "block.flamboyant.violet_stained_glass": "Violet Stained Glass",
+  "block.flamboyant.aquamarine_stained_glass": "Aquamarine Stained Glass",
+  "block.flamboyant.chartreuse_stained_glass": "Chartreuse Stained Glass",
+  "block.flamboyant.vermilion_stained_glass": "Vermilion Stained Glass",
+  "block.flamboyant.amaranth_stained_glass": "Amaranth Stained Glass",
   
   "block.flamboyant.amber_stained_glass_pane": "Amber Stained Glass Pane",
   "block.flamboyant.beige_stained_glass_pane": "Beige Stained Glass Pane",
@@ -151,6 +183,10 @@
   "block.flamboyant.sky_blue_stained_glass_pane": "Sky Blue Stained Glass Pane",
   "block.flamboyant.slate_gray_stained_glass_pane": "Slate Gray Stained Glass Pane",
   "block.flamboyant.violet_stained_glass_pane": "Violet Stained Glass Pane",
+  "block.flamboyant.aquamarine_stained_glass_pane": "Aquamarine Stained Glass Pane",
+  "block.flamboyant.chartreuse_stained_glass_pane": "Chartreuse Stained Glass Pane",
+  "block.flamboyant.vermilion_stained_glass_pane": "Vermilion Stained Glass Pane",
+  "block.flamboyant.amaranth_stained_glass_pane": "Amaranth Stained Glass Pane",
   
   "block.flamboyant.amber_bed": "Amber Bed",
   "block.flamboyant.beige_bed": "Beige Bed",
@@ -168,6 +204,10 @@
   "block.flamboyant.sky_blue_bed": "Sky Blue Bed",
   "block.flamboyant.slate_gray_bed": "Slate Gray Bed",
   "block.flamboyant.violet_bed": "Violet Bed",
+  "block.flamboyant.aquamarine_bed": "Aquamarine Bed",
+  "block.flamboyant.chartreuse_bed": "Chartreuse Bed",
+  "block.flamboyant.vermilion_bed": "Vermilion Bed",
+  "block.flamboyant.amaranth_bed": "Amaranth Bed",
   
   "block.flamboyant.amber_quilted_wool": "Amber Quilted Wool",
   "block.flamboyant.beige_quilted_wool": "Beige Quilted Wool",
@@ -184,5 +224,9 @@
   "block.flamboyant.pale_yellow_quilted_wool": "Pale Yellow Quilted Wool",
   "block.flamboyant.sky_blue_quilted_wool": "Sky Blue Quilted Wool",
   "block.flamboyant.slate_gray_quilted_wool": "Slate Gray Quilted Wool",
-  "block.flamboyant.violet_quilted_wool": "Violet Quilted Wool"
+  "block.flamboyant.violet_quilted_wool": "Violet Quilted Wool",
+  "block.flamboyant.aquamarine_quilted_wool": "Aquamarine Quilted Wool",
+  "block.flamboyant.chartreuse_quilted_wool": "Chartreuse Quilted Wool",
+  "block.flamboyant.vermilion_quilted_wool": "Vermilion Quilted Wool",
+  "block.flamboyant.amaranth_quilted_wool": "Amaranth Quilted Wool"
 }
