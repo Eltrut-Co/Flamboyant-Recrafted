@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/template_bed",
+  "textures": {
+    "particle": "flamboyant:block/amaranth_wool"
+  }
+}

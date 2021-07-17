@@ -1,0 +1,6 @@
+{
+    "parent": "block/template_glass_pane_noside",
+    "textures": {
+        "pane": "flamboyant:block/vermilion_stained_glass"
+    }
+}

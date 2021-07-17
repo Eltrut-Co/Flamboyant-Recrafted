@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/template_bed",
+  "textures": {
+    "particle": "flamboyant:block/aquamarine_wool"
+  }
+}
