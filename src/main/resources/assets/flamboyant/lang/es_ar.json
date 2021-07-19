@@ -15,6 +15,10 @@
   "item.flamboyant.sky_blue_dye": "Tinte azul claro",
   "item.flamboyant.slate_gray_dye": "Tinte gris pizarra",
   "item.flamboyant.violet_dye": "Tinte lavanda",
+  "item.flamboyant.aquamarine_dye": "Tinte aguamarina",
+  "item.flamboyant.chartreuse_dye": "Tinte chartreuse",
+  "item.flamboyant.vermilion_dye": "Tinte bermellón",
+  "item.flamboyant.amaranth_dye": "Tinte amaranto",
 
   "block.flamboyant.amber_wool": "Lana ámbar",
   "block.flamboyant.beige_wool": "Lana beige",
@@ -32,6 +36,10 @@
   "block.flamboyant.sky_blue_wool": "Lana azul claro",
   "block.flamboyant.slate_gray_wool": "Lana gris pizarra",
   "block.flamboyant.violet_wool": "Lana lavanda",
+  "block.flamboyant.aquamarine_wool": "Lana aguamarina",
+  "block.flamboyant.chartreuse_wool": "Lana chartreuse",
+  "block.flamboyant.vermilion_wool": "Lana bermellón",
+  "block.flamboyant.amaranth_wool": "Lana amaranto",
 
   "block.flamboyant.amber_carpet": "Alfombra ámbar",
   "block.flamboyant.beige_carpet": "Alfombra beige",
@@ -49,6 +57,10 @@
   "block.flamboyant.sky_blue_carpet": "Alfombra azul claro",
   "block.flamboyant.slate_gray_carpet": "Alfombra gris pizarra",
   "block.flamboyant.violet_carpet": "Alfombra lavanda",
+  "block.flamboyant.aquamarine_carpet": "Alfombra aguamarina",
+  "block.flamboyant.chartreuse_carpet": "Alfombra chartreuse",
+  "block.flamboyant.vermilion_carpet": "Alfombra bermellón",
+  "block.flamboyant.amaranth_carpet": "Alfombra amaranto",
 
   "block.flamboyant.amber_terracotta": "Terracota ámbar",
   "block.flamboyant.beige_terracotta": "Terracota beige",
@@ -66,6 +78,10 @@
   "block.flamboyant.sky_blue_terracotta": "Terracota azul claro",
   "block.flamboyant.slate_gray_terracotta": "Terracota gris pizarra",
   "block.flamboyant.violet_terracotta": "Terracota lavanda",
+  "block.flamboyant.aquamarine_terracotta": "Terracota aguamarina",
+  "block.flamboyant.chartreuse_terracotta": "Terracota chartreuse",
+  "block.flamboyant.vermilion_terracotta": "Terracota bermellón",
+  "block.flamboyant.amaranth_terracotta": "Terracota amaranto",
 
   "block.flamboyant.amber_glazed_terracotta": "Azulejo ámbar",
   "block.flamboyant.beige_glazed_terracotta": "Azulejo beige",
@@ -83,6 +99,10 @@
   "block.flamboyant.sky_blue_glazed_terracotta": "Azulejo azul claro",
   "block.flamboyant.slate_gray_glazed_terracotta": "Azulejo gris pizarra",
   "block.flamboyant.violet_glazed_terracotta": "Azulejo lavanda",
+  "block.flamboyant.aquamarine_glazed_terracotta": "Azulejo aguamarina",
+  "block.flamboyant.chartreuse_glazed_terracotta": "Azulejo chartreuse",
+  "block.flamboyant.vermilion_glazed_terracotta": "Azulejo bermellón",
+  "block.flamboyant.amaranth_glazed_terracotta": "Azulejo amaranto",
 
   "block.flamboyant.amber_concrete": "Concreto ámbar",
   "block.flamboyant.beige_concrete": "Concreto beige",
@@ -100,6 +120,10 @@
   "block.flamboyant.sky_blue_concrete": "Concreto azul claro",
   "block.flamboyant.slate_gray_concrete": "Concreto gris pizarra",
   "block.flamboyant.violet_concrete": "Concreto lavanda",
+  "block.flamboyant.aquamarine_concrete": "Concreto aguamarina",
+  "block.flamboyant.chartreuse_concrete": "Concreto chartreuse",
+  "block.flamboyant.vermilion_concrete": "Concreto bermellón",
+  "block.flamboyant.amaranth_concrete": "Concreto amaranto",
 
   "block.flamboyant.amber_concrete_powder": "Cemento ámbar",
   "block.flamboyant.beige_concrete_powder": "Cemento beige",
@@ -117,6 +141,10 @@
   "block.flamboyant.sky_blue_concrete_powder": "Cemento azul claro",
   "block.flamboyant.slate_gray_concrete_powder": "Cemento gris pizarra",
   "block.flamboyant.violet_concrete_powder": "Cemento lavanda",
+  "block.flamboyant.aquamarine_concrete_powder": "Cemento aguamarina",
+  "block.flamboyant.chartreuse_concrete_powder": "Cemento chartreuse",
+  "block.flamboyant.vermilion_concrete_powder": "Cemento bermellón",
+  "block.flamboyant.amaranth_concrete_powder": "Cemento amaranto",
 
   "block.flamboyant.amber_stained_glass": "Vidrio ámbar",
   "block.flamboyant.beige_stained_glass": "Vidrio beige",
@@ -134,6 +162,10 @@
   "block.flamboyant.sky_blue_stained_glass": "Vidrio azul claro",
   "block.flamboyant.slate_gray_stained_glass": "Vidrio gris pizarra",
   "block.flamboyant.violet_stained_glass": "Vidrio lavanda",
+  "block.flamboyant.aquamarine_stained_glass": "Vidrio aguamarina",
+  "block.flamboyant.chartreuse_stained_glass": "Vidrio chartreuse",
+  "block.flamboyant.vermilion_stained_glass": "Vidrio bermellón",
+  "block.flamboyant.amaranth_stained_glass": "Vidrio amaranto",
 
   "block.flamboyant.amber_stained_glass_pane": "Panel de vidrio ámbar",
   "block.flamboyant.beige_stained_glass_pane": "Panel de vidrio beige",
@@ -151,6 +183,10 @@
   "block.flamboyant.sky_blue_stained_glass_pane": "Panel de vidrio azul claro",
   "block.flamboyant.slate_gray_stained_glass_pane": "Panel de vidrio gris pizarra",
   "block.flamboyant.violet_stained_glass_pane": "Panel de vidrio lavanda",
+  "block.flamboyant.aquamarine_stained_glass_pane": "Panel de vidrio aguamarina",
+  "block.flamboyant.chartreuse_stained_glass_pane": "Panel de vidrio chartreuse",
+  "block.flamboyant.vermilion_stained_glass_pane": "Panel de vidrio bermellón",
+  "block.flamboyant.amaranth_stained_glass_pane": "Panel de vidrio amaranto",
 
   "block.flamboyant.amber_bed": "Cama ámbar",
   "block.flamboyant.beige_bed": "Cama beige",
@@ -168,6 +204,10 @@
   "block.flamboyant.sky_blue_bed": "Cama azul claro",
   "block.flamboyant.slate_gray_bed": "Cama griz pizarra",
   "block.flamboyant.violet_bed": "Cama lavanda",
+  "block.flamboyant.aquamarine_bed": "Cama aguamarina",
+  "block.flamboyant.chartreuse_bed": "Cama chartreuse",
+  "block.flamboyant.vermilion_bed": "Cama bermellón",
+  "block.flamboyant.amaranth_bed": "Cama amaranto",
 
   "block.flamboyant.amber_quilted_wool": "Lana acolchada ámbar",
   "block.flamboyant.beige_quilted_wool": "Lana acolchada beige",
@@ -184,5 +224,9 @@
   "block.flamboyant.pale_yellow_quilted_wool": "Lana acolchada amarillo pálido",
   "block.flamboyant.sky_blue_quilted_wool": "Lana acolchada azul claro",
   "block.flamboyant.slate_gray_quilted_wool": "Lana acolchada gris pizarra",
-  "block.flamboyant.violet_quilted_wool": "Lana acolchada lavanda"
+  "block.flamboyant.violet_quilted_wool": "Lana acolchada lavanda",
+  "block.flamboyant.aquamarine_quilted_wool": "Lana acolchada aguamarina",
+  "block.flamboyant.chartreuse_quilted_wool": "Lana acolchada chartreuse",
+  "block.flamboyant.vermilion_quilted_wool": "Lana acolchada bermellón",
+  "block.flamboyant.amaranth_quilted_wool": "Lana acolchada amaranto"
 }
