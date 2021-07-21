@@ -1,11 +1,9 @@
 package co.eltrut.flamboyant.core.registrator;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.function.Function;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
 import co.eltrut.differentiate.core.registrator.BlockHelper;
 import co.eltrut.differentiate.core.registrator.Registrator;
@@ -49,7 +47,7 @@ public class FBlockHelper extends BlockHelper {
 	}
 	
 	public List<RegistryObject<Block>> createDyeBlocks(Function<? super FDyeColor, ? extends RegistryObject<Block>> mapper) {
-		return Arrays.stream(FDyeColors.COLORS).map(mapper).collect(Collectors.toList());
+		return this.createMultipleEntries(FDyeColors.COLORS, mapper);
 	}
 	
 	public List<RegistryObject<Block>> createSimpleDyeBlocks(String name, Supplier<Block> block, ItemGroup group, String... mods) {

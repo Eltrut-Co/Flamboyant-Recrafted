@@ -6,6 +6,7 @@ import java.util.Map;
 import co.eltrut.differentiate.core.registrator.Registrator;
 import co.eltrut.flamboyant.core.other.FlamboyantCompat;
 import co.eltrut.flamboyant.core.registrator.FBlockHelper;
+import co.eltrut.flamboyant.core.registrator.FItemHelper;
 import co.eltrut.flamboyant.core.registry.FlamboyantBlocks;
 import net.minecraft.block.BedBlock;
 import net.minecraft.block.BlockState;
@@ -28,6 +29,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class Flamboyant {
     public static final String MOD_ID = "flamboyant";
     public static final Registrator REGISTRATOR = Registrator.create(MOD_ID, s -> {
+    	s.getHelpers().put(ForgeRegistries.ITEMS, new FItemHelper(s));
     	s.getHelpers().put(ForgeRegistries.BLOCKS, new FBlockHelper(s));
     });
     public static Flamboyant instance;
