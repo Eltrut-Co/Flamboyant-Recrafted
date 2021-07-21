@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "chartreuse_dye",
+  "ingredients": [
+    {
+      "item": "minecraft:yellow_dye"
+    },
+    {
+      "item": "minecraft:pale_green_dye"
+    }
+  ],
+  "result": {
+    "item": "flamboyant:chartreuse_dye",
+    "count": 2
+  }
+}
