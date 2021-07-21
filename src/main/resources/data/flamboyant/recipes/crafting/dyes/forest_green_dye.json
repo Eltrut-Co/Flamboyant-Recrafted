@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "forest_green_dye",
   "ingredients": [
     {
       "item": "minecraft:lime_dye"

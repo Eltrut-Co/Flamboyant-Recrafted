@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "navy_dye",
   "ingredients": [
     {
       "item": "minecraft:blue_dye"

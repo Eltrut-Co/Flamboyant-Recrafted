@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "sky_blue_dye",
   "ingredients": [
     {
       "item": "minecraft:light_blue_dye"
