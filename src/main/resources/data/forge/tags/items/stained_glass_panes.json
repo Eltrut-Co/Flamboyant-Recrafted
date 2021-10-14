@@ -16,6 +16,10 @@
     "flamboyant:pale_yellow_stained_glass_pane",
     "flamboyant:sky_blue_stained_glass_pane",
     "flamboyant:slate_gray_stained_glass_pane",
-    "flamboyant:violet_stained_glass_pane"
+    "flamboyant:violet_stained_glass_pane",
+	"flamboyant:aquamarine_stained_glass_pane",
+	"flamboyant:chartreuse_stained_glass_pane",
+	"flamboyant:vermilion_stained_glass_pane",
+	"flamboyant:amaranth_stained_glass_pane"
   ]
 }

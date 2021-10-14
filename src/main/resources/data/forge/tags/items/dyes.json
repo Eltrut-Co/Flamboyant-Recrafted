@@ -16,6 +16,10 @@
     "flamboyant:pale_yellow_dye",
     "flamboyant:sky_blue_dye",
     "flamboyant:slate_gray_dye",
-    "flamboyant:violet_dye"
+    "flamboyant:violet_dye",
+	"flamboyant:aquamarine_dye",
+	"flamboyant:chartreuse_dye",
+	"flamboyant:vermilion_dye",
+	"flamboyant:amaranth_dye"
   ]
 }

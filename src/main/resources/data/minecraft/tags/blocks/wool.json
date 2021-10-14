@@ -32,6 +32,14 @@
     "flamboyant:pale_yellow_quilted_wool",
     "flamboyant:sky_blue_quilted_wool",
     "flamboyant:slate_gray_quilted_wool",
-    "flamboyant:violet_quilted_wool"
+    "flamboyant:violet_quilted_wool",
+	"flamboyant:aquamarine_wool",
+	"flamboyant:chartreuse_wool",
+	"flamboyant:vermilion_wool",
+	"flamboyant:amaranth_wool",
+	"flamboyant:aquamarine_quilted_wool",
+	"flamboyant:chartreuse_quilted_wool",
+	"flamboyant:vermilion_quilted_wool",
+	"flamboyant:amaranth_quilted_wool"
   ]
 }

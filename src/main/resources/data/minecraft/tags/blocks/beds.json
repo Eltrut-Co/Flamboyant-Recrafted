@@ -16,6 +16,10 @@
     "flamboyant:pale_yellow_bed",
     "flamboyant:sky_blue_bed",
     "flamboyant:slate_gray_bed",
-    "flamboyant:violet_bed"
+    "flamboyant:violet_bed",
+	"flamboyant:aquamarine_bed",
+	"flamboyant:chartreuse_bed",
+	"flamboyant:vermilion_bed",
+	"flamboyant:amaranth_bed"
   ]
 }
