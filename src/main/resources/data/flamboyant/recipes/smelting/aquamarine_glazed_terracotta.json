@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "flamboyant:aquamarine_terracotta"
+  },
+  "result": "flamboyant:aquamarine_glazed_terracotta",
+  "experience": 0.1,
+  "cookingtime": 200
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wool",
+  "ingredients": [
+    {
+      "item": "flamboyant:amaranth_dye"
+    },
+    {
+      "tag": "minecraft:wool"
+    }
+  ],
+  "result": {
+    "item": "flamboyant:amaranth_wool"
+  },
+  "conditions": [
+    {
+      "type": "differentiate:flag",
+      "flag": "dye_any_wool"
+    }
+  ]
+}

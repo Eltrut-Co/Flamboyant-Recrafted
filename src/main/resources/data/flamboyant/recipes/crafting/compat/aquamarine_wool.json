@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wool",
+  "ingredients": [
+    {
+      "item": "flamboyant:aquamarine_dye"
+    },
+    {
+      "tag": "minecraft:wool"
+    }
+  ],
+  "result": {
+    "item": "flamboyant:aquamarine_wool"
+  },
+  "conditions": [
+    {
+      "type": "differentiate:flag",
+      "flag": "dye_any_wool"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wool",
+  "ingredients": [
+    {
+      "item": "flamboyant:chartreuse_dye"
+    },
+    {
+      "item": "minecraft:white_wool"
+    }
+  ],
+  "result": {
+    "item": "flamboyant:chartreuse_wool"
+  },
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "differentiate:flag",
+        "flag": "dye_any_wool"
+      }
+    }
+  ]
+}
