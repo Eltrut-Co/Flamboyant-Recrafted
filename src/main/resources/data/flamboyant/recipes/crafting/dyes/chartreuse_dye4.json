@@ -3,7 +3,7 @@
   "group": "chartreuse_dye",
   "ingredients": [
     {
-      "item": "minecraft:pale_yellow_dye"
+      "item": "flamboyant:pale_yellow_dye"
     },
     {
       "item": "minecraft:green_dye"
