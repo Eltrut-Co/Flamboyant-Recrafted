@@ -7,11 +7,14 @@ import co.eltrut.flamboyant.common.blocks.FBedBlock;
 import co.eltrut.flamboyant.common.tileentities.FBedTileEntity;
 import co.eltrut.flamboyant.core.other.FlamboyantAtlas;
 import co.eltrut.flamboyant.core.registry.FlamboyantTileEntities;
+import com.mojang.blaze3d.vertex.PoseStack;
 import it.unimi.dsi.fastutil.ints.Int2IntFunction;
 import net.minecraft.block.BedBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
+import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.client.renderer.model.RenderMaterial;
 import net.minecraft.client.renderer.tileentity.DualBrightnessCallback;
@@ -23,13 +26,13 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.math.vector.Vector3f;
 import net.minecraft.world.World;
 
-public class FBedTileEntityRenderer extends TileEntityRenderer<FBedTileEntity> {
+public class FBedTileEntityRenderer extends BlockEntityRenderer<FBedTileEntity> {
 	
 	private final ModelRenderer headPiece;
 	private final ModelRenderer footPiece;
 	private final ModelRenderer[] legs = new ModelRenderer[4];
 
-	public FBedTileEntityRenderer(TileEntityRendererDispatcher p_i226004_1_) {
+	public FBedTileEntityRenderer(BlockEntityRendererDispatcher p_i226004_1_) {
 	      super(p_i226004_1_);
 	      this.headPiece = new ModelRenderer(64, 64, 0, 0);
 	      this.headPiece.addBox(0.0F, 0.0F, 0.0F, 16.0F, 16.0F, 6.0F, 0.0F);
@@ -54,8 +57,8 @@ public class FBedTileEntityRenderer extends TileEntityRenderer<FBedTileEntity> {
 	   }
 
 	@Override
-	public void render(FBedTileEntity tileEntityIn, float partialTicks, MatrixStack matrixStackIn,
-			IRenderTypeBuffer bufferIn, int combinedLightIn, int combinedOverlayIn) {
+	public void render(FBedTileEntity tileEntityIn, float partialTicks, PoseStack matrixStackIn,
+			MultiBufferSource bufferIn, int combinedLightIn, int combinedOverlayIn) {
 		RenderMaterial rendermaterial = FlamboyantAtlas.get(tileEntityIn.getColor().getTranslationKey()).getMaterial();
 		World world = tileEntityIn.getLevel();
 		if (world != null) {
@@ -100,5 +103,5 @@ public class FBedTileEntityRenderer extends TileEntityRenderer<FBedTileEntity> {
 		this.legs[3].render(p_228847_1_, ivertexbuilder, p_228847_6_, p_228847_7_);
 		p_228847_1_.popPose();
 	}
-	
+
 }

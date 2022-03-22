@@ -7,6 +7,7 @@ import co.eltrut.flamboyant.core.registry.FlamboyantTileEntities;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BedBlock;
 import net.minecraft.block.BlockState;
+import net.minecraft.core.NonNullList;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -16,18 +17,25 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.BedBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BedPart;
 
 public class FBedBlock extends BedBlock {
 	
 	private final FDyeColor color;
 
-	public FBedBlock(FDyeColor colorIn, AbstractBlock.Properties properties) {
+	public FBedBlock(FDyeColor colorIn, Properties properties) {
 		super(null, properties);
 		this.color = colorIn;
 		this.registerDefaultState(this.stateDefinition.any().setValue(PART, BedPart.FOOT).setValue(OCCUPIED, Boolean.valueOf(false)));
 	}
 
-	public TileEntity createNewTileEntity(IBlockReader worldIn) {
+	public BlockEntity createNewTileEntity(BlockReader worldIn) {
 		return new FBedTileEntity(this.color);
 	}
 
@@ -36,7 +44,7 @@ public class FBedBlock extends BedBlock {
 	}
 	
 	@Override
-	public void fillItemCategory(ItemGroup group, NonNullList<ItemStack> items) {
+	public void fillItemCategory(CreativeModeTab group, NonNullList<ItemStack> items) {
 		GroupUtil.fillItem(this.asItem(), Items.BLACK_BED, group, items);
 	}
 	

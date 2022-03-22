@@ -1,23 +1,18 @@
 package co.eltrut.flamboyant.core;
 
 import java.util.HashSet;
-import java.util.Map;
 
 import co.eltrut.differentiate.core.registrator.Registrator;
 import co.eltrut.flamboyant.core.other.FlamboyantCompat;
 import co.eltrut.flamboyant.core.registrator.FBlockHelper;
 import co.eltrut.flamboyant.core.registrator.FItemHelper;
 import co.eltrut.flamboyant.core.registry.FlamboyantBlocks;
-import net.minecraft.block.BedBlock;
-import net.minecraft.block.BlockState;
-import net.minecraft.state.properties.BedPart;
-import net.minecraft.village.PointOfInterestType;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
-import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;

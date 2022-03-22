@@ -8,6 +8,7 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
+import net.minecraft.world.level.material.MaterialColor;
 
 public class FDyeColor implements IStringSerializable {
 

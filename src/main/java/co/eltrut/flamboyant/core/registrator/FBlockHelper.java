@@ -22,11 +22,21 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.client.renderer.tileentity.ItemStackTileEntityRenderer;
 import net.minecraft.item.BedItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.CreativeModeTab;
 import net.minecraft.state.properties.BedPart;
+import net.minecraft.world.item.BedItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BedPart;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.RegistryObject;
 
 public class FBlockHelper extends BlockHelper {
 
@@ -37,11 +47,11 @@ public class FBlockHelper extends BlockHelper {
 	public RegistryObject<Block> createBedBlock(FDyeColor color) {
 		String name = color.getTranslationKey() + "_bed";
 		RegistryObject<Block> registeredBlock = this.registry.register(name, () -> {
-			return new FBedBlock(color, AbstractBlock.Properties.of(Material.WOOL, (state) -> {
+			return new FBedBlock(color, BlockBehaviour.Properties.of(Material.WOOL, (state) -> {
 		         return state.getValue(FBedBlock.PART) == BedPart.FOOT ? color.getMapColor() : MaterialColor.WOOL;
 		      }).sound(SoundType.WOOD).strength(0.2F).noOcclusion());
 		});
-		this.itemRegister.createItem(name, () -> new BedItem(registeredBlock.get(), new Item.Properties().stacksTo(1).tab(ItemGroup.TAB_DECORATIONS).setISTER(() -> bedISTER(color))));
+		this.itemRegister.createItem(name, () -> new BedItem(registeredBlock.get(), new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_DECORATIONS).setISTER(() -> bedISTER(color))));
 		FlamboyantAtlas.addBedInfo(color.getTranslationKey());
 		return registeredBlock;
 	}
@@ -50,13 +60,13 @@ public class FBlockHelper extends BlockHelper {
 		return this.createMultipleEntries(FDyeColors.COLORS, mapper);
 	}
 	
-	public List<RegistryObject<Block>> createSimpleDyeBlocks(String name, Supplier<Block> block, ItemGroup group, String... mods) {
+	public List<RegistryObject<Block>> createSimpleDyeBlocks(String name, Supplier<Block> block, CreativeModeTab group, String... mods) {
 		return this.createDyeBlocks(s -> {
 			return this.createSimpleBlock(s.getSerializedName() + name, block, group, mods);
 		});
 	}
 	
-	public List<RegistryObject<Block>> createSimpleFuelDyeBlocks(String name, Supplier<Block> block, ItemGroup group, int burnTime, String... mods) {
+	public List<RegistryObject<Block>> createSimpleFuelDyeBlocks(String name, Supplier<Block> block, CreativeModeTab group, int burnTime, String... mods) {
 		return this.createDyeBlocks(s -> {
 			return this.createSimpleFuelBlock(s.getSerializedName() + name, block, group, burnTime, mods);
 		});
@@ -64,7 +74,7 @@ public class FBlockHelper extends BlockHelper {
 	
 	public List<RegistryObject<Block>> createConcretePowderBlocks(List<RegistryObject<Block>> concreteBlocks) {
 		return this.createDyeBlocks(s -> {
-			return this.createSimpleBlock(s.getSerializedName() + "_concrete_powder", () -> new FConcretePowderBlock(concreteBlocks.get(s.getId()).get(), FlamboyantBlocks.Properties.CONCRETE_POWDER), ItemGroup.TAB_BUILDING_BLOCKS);
+			return this.createSimpleBlock(s.getSerializedName() + "_concrete_powder", () -> new FConcretePowderBlock(concreteBlocks.get(s.getId()).get(), FlamboyantBlocks.Properties.CONCRETE_POWDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
 		});
 	}
 	

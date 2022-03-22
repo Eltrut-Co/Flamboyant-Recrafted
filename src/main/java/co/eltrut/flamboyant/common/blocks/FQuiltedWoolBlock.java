@@ -1,7 +1,7 @@
 package co.eltrut.flamboyant.common.blocks;
 
 import co.eltrut.differentiate.common.interf.IFlammableBlock;
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 
 public class FQuiltedWoolBlock extends Block implements IFlammableBlock {
 
