@@ -1,15 +1,15 @@
 package co.eltrut.flamboyant.core.registrator;
 
-import java.util.List;
-import java.util.function.Function;
-import java.util.function.Supplier;
-
 import co.eltrut.differentiate.core.registrator.ItemHelper;
 import co.eltrut.differentiate.core.registrator.Registrator;
 import co.eltrut.flamboyant.common.color.FDyeColor;
 import co.eltrut.flamboyant.common.color.FDyeColors;
-import net.minecraft.item.Item;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraft.world.item.Item;
+import net.minecraftforge.registries.RegistryObject;
+
+import java.util.List;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class FItemHelper extends ItemHelper {
 

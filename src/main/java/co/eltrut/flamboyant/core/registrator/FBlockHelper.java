@@ -1,29 +1,13 @@
 package co.eltrut.flamboyant.core.registrator;
 
-import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.function.Function;
-import java.util.function.Supplier;
-
 import co.eltrut.differentiate.core.registrator.BlockHelper;
 import co.eltrut.differentiate.core.registrator.Registrator;
-import co.eltrut.flamboyant.client.renderer.FBedItemRenderer;
 import co.eltrut.flamboyant.common.blocks.FBedBlock;
 import co.eltrut.flamboyant.common.blocks.FConcretePowderBlock;
 import co.eltrut.flamboyant.common.color.FDyeColor;
 import co.eltrut.flamboyant.common.color.FDyeColors;
 import co.eltrut.flamboyant.core.other.FlamboyantAtlas;
 import co.eltrut.flamboyant.core.registry.FlamboyantBlocks;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialColor;
-import net.minecraft.client.renderer.tileentity.ItemStackTileEntityRenderer;
-import net.minecraft.item.BedItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.CreativeModeTab;
-import net.minecraft.state.properties.BedPart;
 import net.minecraft.world.item.BedItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -33,10 +17,11 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.List;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class FBlockHelper extends BlockHelper {
 
@@ -51,7 +36,7 @@ public class FBlockHelper extends BlockHelper {
 		         return state.getValue(FBedBlock.PART) == BedPart.FOOT ? color.getMapColor() : MaterialColor.WOOL;
 		      }).sound(SoundType.WOOD).strength(0.2F).noOcclusion());
 		});
-		this.itemRegister.createItem(name, () -> new BedItem(registeredBlock.get(), new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_DECORATIONS).setISTER(() -> bedISTER(color))));
+		this.itemRegister.createItem(name, () -> new BedItem(registeredBlock.get(), new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_DECORATIONS)));
 		FlamboyantAtlas.addBedInfo(color.getTranslationKey());
 		return registeredBlock;
 	}
@@ -80,11 +65,6 @@ public class FBlockHelper extends BlockHelper {
 	
 	public List<RegistryObject<Block>> createBedBlocks() {
 		return this.createDyeBlocks(this::createBedBlock);
-	}
-	
-	@OnlyIn(Dist.CLIENT)
-	private static Callable<ItemStackTileEntityRenderer> bedISTER(FDyeColor color) {
-		return () -> new FBedItemRenderer(color);
 	}
 
 }

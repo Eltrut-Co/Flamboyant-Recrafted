@@ -2,22 +2,14 @@ package co.eltrut.flamboyant.common.blocks;
 
 import co.eltrut.differentiate.common.interf.IRenderTypeBlock;
 import co.eltrut.differentiate.core.util.GroupUtil;
-import net.minecraft.block.AbstractGlassBlock;
-import net.minecraft.block.IBeaconBeamColorProvider;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.NonNullList;
-import net.minecraft.item.DyeColor;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.util.NonNullList;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.AbstractGlassBlock;
 import net.minecraft.world.level.block.BeaconBeamBlock;
-import net.minecraft.world.level.block.GlassBlock;
 
 public class FStainedGlassBlock extends AbstractGlassBlock implements BeaconBeamBlock, IRenderTypeBlock {
 	

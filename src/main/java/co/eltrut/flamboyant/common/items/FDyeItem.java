@@ -1,13 +1,6 @@
 package co.eltrut.flamboyant.common.items;
 
-import co.eltrut.differentiate.core.util.GroupUtil;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.util.NonNullList;
-
-import net.minecraft.item.Item.Properties;
+import net.minecraft.world.item.Item;
 
 public class FDyeItem extends Item {
 	

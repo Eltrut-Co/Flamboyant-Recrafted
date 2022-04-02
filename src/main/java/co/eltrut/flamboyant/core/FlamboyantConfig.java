@@ -19,7 +19,7 @@ public class FlamboyantConfig {
 
 			builder.pop();
 
-			BooleanRecipeCondition.TABLE.put("smeltable_concrete_powder", smeltableConcretePowder);
+			BooleanRecipeCondition.MAP.put("smeltable_concrete_powder", smeltableConcretePowder);
 		}
 
 	}

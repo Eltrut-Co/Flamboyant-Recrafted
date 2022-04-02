@@ -1,16 +1,17 @@
 package co.eltrut.flamboyant.common.color;
 
-import java.util.ArrayList;
-
-import javax.annotation.Nullable;
-
-import net.minecraft.block.material.MaterialColor;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.IStringSerializable;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.util.StringRepresentable;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.material.MaterialColor;
 
-public class FDyeColor implements IStringSerializable {
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+
+public class FDyeColor implements StringRepresentable {
 
 	// TODO: figure out what is going on here
 	private static final ArrayList<FDyeColor> VALUES = new ArrayList<FDyeColor>();
@@ -22,26 +23,21 @@ public class FDyeColor implements IStringSerializable {
 	private final int id;
 	private final String translationKey;
 	private final MaterialColor mapColor;
-	private final int colorValue;
-	private final int swappedColorValue;
 	private final float[] colorComponentValues;
 	private final int fireworkColor;
-	private final net.minecraftforge.common.Tags.IOptionalNamedTag<Item> tag;
+	private final TagKey<Item> tag;
 	private final int textColor;
 
 	public FDyeColor(int idIn, String translationKeyIn, int colorValueIn, MaterialColor mapColorIn, int fireworkColorIn,
 			int textColorIn) {
 		this.id = idIn;
 		this.translationKey = translationKeyIn;
-		this.colorValue = colorValueIn;
 		this.mapColor = mapColorIn;
 		this.textColor = textColorIn;
 		int i = (colorValueIn & 16711680) >> 16;
 		int j = (colorValueIn & '\uff00') >> 8;
 		int k = (colorValueIn & 255) >> 0;
-		this.swappedColorValue = k << 16 | j << 8 | i << 0;
-		this.tag = net.minecraft.tags.ItemTags
-				.createOptional(new net.minecraft.util.ResourceLocation("forge", "dyes/" + translationKeyIn));
+		this.tag = ItemTags.create(new ResourceLocation("forge", "dyes/" + translationKeyIn));
 		this.colorComponentValues = new float[] { (float) i / 255.0F, (float) j / 255.0F, (float) k / 255.0F };
 		this.fireworkColor = fireworkColorIn;
 
@@ -109,11 +105,7 @@ public class FDyeColor implements IStringSerializable {
 		return this.translationKey;
 	}
 
-	public int getColorValue() {
-		return colorValue;
-	}
-
-	public net.minecraftforge.common.Tags.IOptionalNamedTag<Item> getTag() {
+	public TagKey<Item> getTag() {
 		return tag;
 	}
 
@@ -123,7 +115,7 @@ public class FDyeColor implements IStringSerializable {
 //	         return ((DyeItem)stack.getItem()).getDyeColor();
 
 		for (FDyeColor color : VALUES) {
-			if (stack.getItem().is(color.getTag()))
+			if (stack.is(color.getTag()))
 				return color;
 		}
 

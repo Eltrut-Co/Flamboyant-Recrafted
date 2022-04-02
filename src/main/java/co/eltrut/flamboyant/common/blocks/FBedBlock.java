@@ -7,6 +7,7 @@ import co.eltrut.flamboyant.core.registry.FlamboyantTileEntities;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BedBlock;
 import net.minecraft.block.BlockState;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemGroup;
@@ -17,10 +18,14 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.BedBlock;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BedPart;
@@ -35,10 +40,6 @@ public class FBedBlock extends BedBlock {
 		this.registerDefaultState(this.stateDefinition.any().setValue(PART, BedPart.FOOT).setValue(OCCUPIED, Boolean.valueOf(false)));
 	}
 
-	public BlockEntity createNewTileEntity(BlockReader worldIn) {
-		return new FBedTileEntity(this.color);
-	}
-
 	public FDyeColor getFColor() {
 		return this.color;
 	}
@@ -49,17 +50,12 @@ public class FBedBlock extends BedBlock {
 	}
 	
 	@Override
-	public boolean hasTileEntity(BlockState state) {
-		return true;
-	}
-	
-	@Override
-	public TileEntity createTileEntity(BlockState state, IBlockReader world) {
+	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
 		return FlamboyantTileEntities.BED.get().create();
 	}
 	
 	@Override
-	public boolean isBed(BlockState state, IBlockReader block, BlockPos pos, Entity entity) {
+	public boolean isBed(BlockState state, BlockGetter block, BlockPos pos, Entity entity) {
 		return true;
 	}
 	

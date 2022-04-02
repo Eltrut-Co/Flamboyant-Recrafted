@@ -1,6 +1,6 @@
 package co.eltrut.flamboyant.common.color;
 
-import net.minecraft.block.material.MaterialColor;
+import net.minecraft.world.level.material.MaterialColor;
 
 public class FDyeColors {
 
