@@ -1,10 +1,10 @@
 modLoader="javafml"
-loaderVersion="[34,)"
+loaderVersion="[40,)"
 license="GNU GPL 3.0"
 issueTrackerURL="https://github.com/Eltrut-Co/Flamboyant-Recrafted/issues"
 [[mods]]
 modId="flamboyant"
-version="1.5.0"
+version="2.0.0"
 displayName="Flamboyant Recrafted"
 logoFile="flamboyant.png"
 credits="Eltrut & Co."
@@ -16,20 +16,20 @@ A §msimple§r mod that adds 16 colors to the game on top of the 16 we already h
 [[dependencies.flamboyant]]
     modId="forge"
     mandatory=true
-    versionRange="[34,)"
+    versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.flamboyant]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.3, 1.17)"
+    versionRange="[1.18.2,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.flamboyant]]
     modId="differentiate"
     mandatory=true
-    versionRange="[0.4.0,)"
+    versionRange="[1.0.3,)"
     ordering="AFTER"
     side="BOTH"

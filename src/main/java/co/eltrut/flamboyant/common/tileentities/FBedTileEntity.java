@@ -8,7 +8,7 @@ import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class FBedTileEntity extends BlockEntity /*implements IRendererTileEntity<FBedTileEntity>*/ {
+public class FBedTileEntity extends BlockEntity {
 
 	private FDyeColor color;
 
@@ -28,7 +28,7 @@ public class FBedTileEntity extends BlockEntity /*implements IRendererTileEntity
 
 	public FDyeColor getColor() {
 		if (this.color == null) {
-			this.color = ((FBedBlock)this.getBlockState().getBlock()).getFColor();
+			this.color = ((FBedBlock)this.getBlockState().getBlock()).getColor();
 		}
 
 		return this.color;
@@ -37,10 +37,5 @@ public class FBedTileEntity extends BlockEntity /*implements IRendererTileEntity
 	public void setColor(FDyeColor color) {
 		this.color = color;
 	}
-
-//	@Override
-//	public Function<? super TileEntityRendererDispatcher, ? extends TileEntityRenderer<? super FBedTileEntity>> getRendererFactory() {
-//		return FBedTileEntityRenderer::new;
-//	}
 
 }

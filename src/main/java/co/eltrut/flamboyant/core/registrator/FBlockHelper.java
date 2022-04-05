@@ -6,9 +6,9 @@ import co.eltrut.flamboyant.common.blocks.FBedBlock;
 import co.eltrut.flamboyant.common.blocks.FConcretePowderBlock;
 import co.eltrut.flamboyant.common.color.FDyeColor;
 import co.eltrut.flamboyant.common.color.FDyeColors;
+import co.eltrut.flamboyant.common.items.FBedItem;
 import co.eltrut.flamboyant.core.other.FlamboyantAtlas;
 import co.eltrut.flamboyant.core.registry.FlamboyantBlocks;
-import net.minecraft.world.item.BedItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -36,7 +36,7 @@ public class FBlockHelper extends BlockHelper {
 		         return state.getValue(FBedBlock.PART) == BedPart.FOOT ? color.getMapColor() : MaterialColor.WOOL;
 		      }).sound(SoundType.WOOD).strength(0.2F).noOcclusion());
 		});
-		this.itemRegister.createItem(name, () -> new BedItem(registeredBlock.get(), new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_DECORATIONS)));
+		this.itemRegister.createItem(name, () -> new FBedItem(registeredBlock.get(), new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_DECORATIONS)));
 		FlamboyantAtlas.addBedInfo(color.getTranslationKey());
 		return registeredBlock;
 	}
