@@ -28,12 +28,12 @@ import net.minecraft.world.level.block.DoubleBlockCombiner;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BedPart;
 
-public class FBedTileEntityRenderer implements BlockEntityRenderer<FBedTileEntity> {
+public class FBedBlockEntityRenderer implements BlockEntityRenderer<FBedTileEntity> {
 	
 	private final ModelPart headPiece;
 	private final ModelPart footPiece;
 
-	public FBedTileEntityRenderer(BlockEntityRendererProvider.Context context) {
+	public FBedBlockEntityRenderer(BlockEntityRendererProvider.Context context) {
 		this.headPiece = context.bakeLayer(ModelLayers.BED_HEAD);
 		this.footPiece = context.bakeLayer(ModelLayers.BED_FOOT);
 	}

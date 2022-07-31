@@ -1,10 +1,6 @@
 package co.eltrut.flamboyant.core.other;
 
-import co.eltrut.flamboyant.client.renderer.FBedTileEntityRenderer;
 import co.eltrut.flamboyant.core.Flamboyant;
-import co.eltrut.flamboyant.core.registry.FlamboyantTileEntities;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
 @EventBusSubscriber(modid = Flamboyant.MOD_ID)
